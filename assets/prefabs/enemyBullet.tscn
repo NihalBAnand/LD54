@@ -4,20 +4,20 @@
 [ext_resource type="Texture2D" uid="uid://bt77mq53fq2gi" path="res://assets/Art/Bullet.png" id="2_wurk1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nuwia"]
-size = Vector2(96.0869, 12)
+size = Vector2(44, 13.6379)
 
 [node name="enemybullet" type="Area2D" groups=["bullet"]]
 scale = Vector2(0.25, 0.25)
 script = ExtResource("1_5r3wa")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1.36223, -47.0869)
+position = Vector2(1.36233, -18.4641)
 rotation = -1.5708
-scale = Vector2(0.652174, 0.267241)
+scale = Vector2(0.270537, 0.267241)
 texture = ExtResource("2_wurk1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.362232, -48.0434)
+position = Vector2(1.18106, -18)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_nuwia")
 

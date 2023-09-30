@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://ysb5lvfag6hn" path="res://assets/prefabs/player.tscn" id="1_5kjdu"]
 [ext_resource type="PackedScene" uid="uid://5owr73mr7mac" path="res://assets/prefabs/baseEnemy.tscn" id="2_0vkvn"]
-[ext_resource type="PackedScene" uid="uid://biisjrgnsd4rl" path="res://assets/prefabs/crate.tscn" id="3_wspuf"]
-[ext_resource type="PackedScene" uid="uid://dbv0dswv54h50" path="res://assets/prefabs/barrel.tscn" id="4_5s7u7"]
+[ext_resource type="PackedScene" path="res://assets/prefabs/crate.tscn" id="3_wspuf"]
+[ext_resource type="PackedScene" uid="uid://dfapc3nj4pfk2" path="res://assets/prefabs/barrel.tscn" id="4_5s7u7"]
 
 [node name="shooter" type="Node2D"]
 
