@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbshkf5t58wgq"]
+
+[ext_resource type="Script" path="res://assets/scripts/Player.gd" id="1_8hopx"]
+[ext_resource type="Texture2D" uid="uid://ddehix4gg4cn3" path="res://assets/programmerArt/MC.png" id="2_ytjbo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pa474"]
+size = Vector2(118, 208)
+
+[node name="shooter" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+scale = Vector2(1.21926, 0.896552)
+motion_mode = 1
+platform_on_leave = 2
+script = ExtResource("1_8hopx")
+
+[node name="Mc" type="Sprite2D" parent="Player"]
+position = Vector2(274, 115)
+texture = ExtResource("2_ytjbo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(274, 115)
+shape = SubResource("RectangleShape2D_pa474")
+
+[node name="BulletSpawn" type="Marker2D" parent="Player"]
+position = Vector2(274.758, 224.192)
