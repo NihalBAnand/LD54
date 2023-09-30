@@ -1,11 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://biisjrgnsd4rl"]
+[gd_scene load_steps=3 format=3 uid="uid://dqmwsrmeuxwcf"]
 
 [ext_resource type="Texture2D" uid="uid://bjh8etduxlifc" path="res://assets/Art/Crate.png" id="1_67ipi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0g18r"]
 size = Vector2(326, 426.5)
 
-[node name="crate" type="Area2D"]
+[node name="crate" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_67ipi")

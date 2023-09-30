@@ -11,10 +11,13 @@ const speed = 1
 var health = 100
 
 func _physics_process(delta):
-	if  get_parent().get_node("Player").global_position.x> self.global_position.x:
+	if abs(get_parent().get_node("Player").global_position.x - global_position.x) < 5:
+		self.position.x += 0;
+	elif  get_parent().get_node("Player").global_position.x> self.global_position.x:
 		self.position.x += speed
 	elif get_parent().get_node("Player").global_position.x < self.global_position.x:
 		self.position.x -= speed
+	
 
 	#print("fkjadsfjdskjafjkl")
 

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ysb5lvfag6hn" path="res://assets/prefabs/player.tscn" id="1_5kjdu"]
 [ext_resource type="PackedScene" uid="uid://5owr73mr7mac" path="res://assets/prefabs/baseEnemy.tscn" id="2_0vkvn"]
-[ext_resource type="PackedScene" path="res://assets/prefabs/crate.tscn" id="3_wspuf"]
+[ext_resource type="PackedScene" uid="uid://dqmwsrmeuxwcf" path="res://assets/prefabs/crate.tscn" id="3_wspuf"]
 [ext_resource type="PackedScene" uid="uid://dfapc3nj4pfk2" path="res://assets/prefabs/barrel.tscn" id="4_5s7u7"]
 
 [node name="shooter" type="Node2D"]
@@ -11,7 +11,8 @@
 position = Vector2(677, 2)
 
 [node name="baseEnemy" parent="." instance=ExtResource("2_0vkvn")]
-position = Vector2(638, 569)
+position = Vector2(668, 658)
+scale = Vector2(0.7, 0.7)
 
 [node name="crate" parent="." instance=ExtResource("3_wspuf")]
 position = Vector2(1144, 496)
