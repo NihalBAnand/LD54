@@ -28,6 +28,18 @@ scale = Vector2(0.3, 0.3)
 position = Vector2(837, 504)
 scale = Vector2(0.3, 0.3)
 
+[node name="crate4" parent="." instance=ExtResource("3_wspuf")]
+position = Vector2(835, 418)
+scale = Vector2(0.3, 0.3)
+
+[node name="crate5" parent="." instance=ExtResource("3_wspuf")]
+position = Vector2(833, 331)
+scale = Vector2(0.3, 0.3)
+
+[node name="crate6" parent="." instance=ExtResource("3_wspuf")]
+position = Vector2(935, 502)
+scale = Vector2(0.3, 0.3)
+
 [node name="barrel" parent="." instance=ExtResource("4_5s7u7")]
 position = Vector2(84, 411)
 scale = Vector2(0.2, 0.2)
