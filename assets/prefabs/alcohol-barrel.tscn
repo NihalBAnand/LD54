@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bbcd6cd2lnexp"]
+[gd_scene load_steps=3 format=3 uid="uid://dfapc3nj4pfk2"]
 
-[ext_resource type="Texture2D" uid="uid://cttk7bn1o5ed3" path="res://assets/Art/Barrel.png" id="1_58u4q"]
+[ext_resource type="Texture2D" uid="uid://dh2ic2h5fcd7b" path="res://assets/Art/Alcohol-Barrel.png" id="1_2sojj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rdy4i"]
 size = Vector2(419, 515)
@@ -8,7 +8,7 @@ size = Vector2(419, 515)
 [node name="barrel" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_58u4q")
+texture = ExtResource("1_2sojj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(5.5, 28.5)

@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://fshixd7b406w"]
+[gd_scene load_steps=4 format=3 uid="uid://b573fvrle16td"]
 
-[ext_resource type="Script" path="res://assets/prefabs/enemyBullet.gd" id="1_5r3wa"]
+[ext_resource type="Script" path="res://assets/scripts/enemyBullet.gd" id="1_hi388"]
 [ext_resource type="Texture2D" uid="uid://bt77mq53fq2gi" path="res://assets/Art/Bullet.png" id="2_wurk1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nuwia"]
@@ -8,7 +8,7 @@ size = Vector2(44, 13.6379)
 
 [node name="enemybullet" type="Area2D" groups=["bullet"]]
 scale = Vector2(0.25, 0.25)
-script = ExtResource("1_5r3wa")
+script = ExtResource("1_hi388")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1.36233, -18.4641)
