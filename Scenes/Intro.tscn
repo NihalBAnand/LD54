@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8q1xkkjbiypw"]
+
+[ext_resource type="Texture2D" uid="uid://mc20okblky6w" path="res://assets/Art/sunset.png" id="1_36clf"]
+[ext_resource type="Script" path="res://assets/scripts/introCamera.gd" id="2_3vtf0"]
+
+[node name="Intro" type="Node2D"]
+
+[node name="Sunset" type="Sprite2D" parent="."]
+position = Vector2(800, 449.75)
+scale = Vector2(0.799, 0.931231)
+texture = ExtResource("1_36clf")
+flip_h = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(800, 450)
+script = ExtResource("2_3vtf0")
