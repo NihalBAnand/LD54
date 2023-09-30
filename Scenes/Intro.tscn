@@ -6,11 +6,11 @@
 [node name="Intro" type="Node2D"]
 
 [node name="Sunset" type="Sprite2D" parent="."]
-position = Vector2(800, 449.75)
-scale = Vector2(0.799, 0.931231)
+position = Vector2(500, 500)
+scale = Vector2(0.496, 0.472079)
 texture = ExtResource("1_36clf")
 flip_h = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(800, 450)
+position = Vector2(500, 500)
 script = ExtResource("2_3vtf0")
