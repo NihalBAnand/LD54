@@ -13,5 +13,7 @@ func _ready():
 func _physics_process(delta):
 	position += transform.y*speed
 
-func _on_Bullet_body_entered(body):
+func _on_body_entered(body):
+	if body.is_in_group("ppl"):
+		body.applyDamage(20)
 	queue_free()

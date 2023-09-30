@@ -8,7 +8,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wj2rt"]
 size = Vector2(195, 332)
 
-[node name="baseEnemy" type="CharacterBody2D"]
+[node name="baseEnemy" type="CharacterBody2D" groups=["ppl"]]
 position = Vector2(1, 0)
 script = ExtResource("1_cw5j7")
 enemyBullet = ExtResource("2_hm1yb")

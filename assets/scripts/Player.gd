@@ -4,20 +4,49 @@ class_name player
 
 @export var speed = 400
 @export var bullet: PackedScene
-@onready var spawn_point: Marker2D = $BulletSpawn 
+@onready var spawn_point: Marker2D = $BulletSpawn
 
+var health = 100 
+var delayTimer = null
+var bulletDelay =  .2
+var canShoot = true
 func get_input():
 	var input_direction = Input.get_vector("player_left", "player_right", "player_up", "player_down")
 	velocity = input_direction * speed
 	
 
+func _ready():
+	delayTimer = Timer.new()
+	delayTimer.set_one_shot(true)
+	delayTimer.set_wait_time(bulletDelay)
+	delayTimer.timeout.connect(_on_delay_complete)
+	add_child(delayTimer)
+	
+
+
 func _physics_process(delta):
 	get_input()
 	move_and_slide()
-	if Input.is_action_just_pressed("shoot"): shoot()
+	if Input.is_action_just_pressed("shoot") && (canShoot): shoot()
 
 
 func shoot():
 	var b: bullet = bullet.instantiate()
 	owner.add_child(b)
 	b.transform = spawn_point.global_transform
+	canShoot = false
+	delayTimer.start()
+	
+
+func _on_delay_complete():
+	canShoot = true
+	
+	
+
+func applyDamage(damage: float) -> void:
+	health-= damage
+	if health<=0:
+		queue_free()
+	print("player health: ")
+	print(health)
+

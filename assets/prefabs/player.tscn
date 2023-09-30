@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pa474"]
 size = Vector2(118, 208)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["ppl"]]
 scale = Vector2(1.21926, 0.896552)
 motion_mode = 1
 platform_on_leave = 2
