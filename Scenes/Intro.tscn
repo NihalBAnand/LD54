@@ -1,9 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://c8q1xkkjbiypw"]
+[gd_scene load_steps=4 format=3 uid="uid://c8q1xkkjbiypw"]
 
+[ext_resource type="Texture2D" uid="uid://d266bqax0a6xs" path="res://assets/Art/cinematic black.png" id="1_04nho"]
 [ext_resource type="Texture2D" uid="uid://mc20okblky6w" path="res://assets/Art/sunset.png" id="1_36clf"]
 [ext_resource type="Script" path="res://assets/scripts/introCamera.gd" id="2_3vtf0"]
 
 [node name="Intro" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(500, 500)
+scale = Vector2(500, 500)
+texture = ExtResource("1_04nho")
 
 [node name="Sunset" type="Sprite2D" parent="."]
 position = Vector2(500, 500)
