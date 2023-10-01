@@ -13,10 +13,14 @@ var health = 100
 func _physics_process(delta):
 	if abs(get_parent().get_node("Player").global_position.x - global_position.x) < 5:
 		self.position.x += 0;
+		get_node("Sprite2D").play("idle");
 	elif  get_parent().get_node("Player").global_position.x> self.global_position.x:
 		self.position.x += speed
+		get_node("Sprite2D").play("walk");
 	elif get_parent().get_node("Player").global_position.x < self.global_position.x:
 		self.position.x -= speed
+		get_node("Sprite2D").play("walk");
+		
 	
 
 	#print("fkjadsfjdskjafjkl")

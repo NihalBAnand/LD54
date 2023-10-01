@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://feimq2gthgmx"]
+
+[ext_resource type="Texture2D" uid="uid://c737k4818f2f4" path="res://assets/Art/Building_with_riser.png" id="1_1py7h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jgyj4"]
+size = Vector2(1045, 1483)
+
+[node name="Plain Building Risers" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1py7h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-104.5, -4.5)
+shape = SubResource("RectangleShape2D_jgyj4")

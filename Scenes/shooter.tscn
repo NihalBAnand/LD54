@@ -1,49 +1,59 @@
-[gd_scene load_steps=6 format=3 uid="uid://bbshkf5t58wgq"]
+[gd_scene load_steps=8 format=3 uid="uid://bbshkf5t58wgq"]
 
 [ext_resource type="PackedScene" uid="uid://ysb5lvfag6hn" path="res://assets/prefabs/player.tscn" id="1_5kjdu"]
 [ext_resource type="PackedScene" uid="uid://5owr73mr7mac" path="res://assets/prefabs/baseEnemy.tscn" id="2_0vkvn"]
 [ext_resource type="PackedScene" uid="uid://dqmwsrmeuxwcf" path="res://assets/prefabs/crate.tscn" id="3_wspuf"]
 [ext_resource type="PackedScene" uid="uid://dfapc3nj4pfk2" path="res://assets/prefabs/alcohol-barrel.tscn" id="4_5s7u7"]
 [ext_resource type="PackedScene" uid="uid://bbcd6cd2lnexp" path="res://assets/prefabs/barrel.tscn" id="5_6pogv"]
+[ext_resource type="PackedScene" uid="uid://cjh8bmoqdabrj" path="res://assets/prefabs/plain-building.tscn" id="6_cwotx"]
+[ext_resource type="PackedScene" uid="uid://feimq2gthgmx" path="res://assets/prefabs/plain-building-risers.tscn" id="7_ha8vb"]
 
 [node name="shooter" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_5kjdu")]
-position = Vector2(350, 1)
-scale = Vector2(0.8, 0.588)
+position = Vector2(889, -2)
+scale = Vector2(1, 0.736)
 
 [node name="baseEnemy" parent="." instance=ExtResource("2_0vkvn")]
-position = Vector2(351, 835)
-scale = Vector2(0.5, 0.5)
+position = Vector2(949, 1796)
+scale = Vector2(0.6, 0.6)
 
 [node name="crate" parent="." instance=ExtResource("3_wspuf")]
-position = Vector2(742, 503)
+position = Vector2(1419, 1144)
 scale = Vector2(0.3, 0.3)
 
 [node name="crate2" parent="." instance=ExtResource("3_wspuf")]
-position = Vector2(741, 420)
+position = Vector2(1418, 1061)
 scale = Vector2(0.3, 0.3)
 
 [node name="crate3" parent="." instance=ExtResource("3_wspuf")]
-position = Vector2(837, 504)
+position = Vector2(1514, 1145)
 scale = Vector2(0.3, 0.3)
 
 [node name="crate4" parent="." instance=ExtResource("3_wspuf")]
-position = Vector2(835, 418)
+position = Vector2(1512, 1059)
 scale = Vector2(0.3, 0.3)
 
 [node name="crate5" parent="." instance=ExtResource("3_wspuf")]
-position = Vector2(833, 331)
+position = Vector2(1510, 972)
 scale = Vector2(0.3, 0.3)
 
 [node name="crate6" parent="." instance=ExtResource("3_wspuf")]
-position = Vector2(935, 502)
+position = Vector2(1612, 1143)
 scale = Vector2(0.3, 0.3)
 
 [node name="barrel" parent="." instance=ExtResource("4_5s7u7")]
-position = Vector2(84, 411)
+position = Vector2(663, 932)
 scale = Vector2(0.2, 0.2)
 
 [node name="barrel2" parent="." instance=ExtResource("5_6pogv")]
-position = Vector2(85, 333)
+position = Vector2(660, 857)
 scale = Vector2(0.2, 0.2)
+
+[node name="Plain Building" parent="." instance=ExtResource("6_cwotx")]
+position = Vector2(247, 304)
+scale = Vector2(0.4, 0.4)
+
+[node name="Plain Building Risers" parent="." instance=ExtResource("7_ha8vb")]
+position = Vector2(255, 938)
+scale = Vector2(0.4, 0.4)

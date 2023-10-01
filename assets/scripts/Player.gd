@@ -28,6 +28,10 @@ func _physics_process(delta):
 	get_input()
 	move_and_slide()
 	if Input.is_action_just_pressed("shoot") && (canShoot): shoot()
+	if velocity != Vector2(0, 0):
+		get_node("Mc").play("walk");
+	else:
+		get_node("Mc").play("idle");
 
 
 func shoot():
