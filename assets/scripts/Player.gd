@@ -7,7 +7,7 @@ class_name player
 var ammo
 @onready var spawn_point: Marker2D = $BulletSpawn
 
-var health = 100 
+var health = 30
 var delayTimer = null
 var bulletDelay =  .2
 var canShoot = true

@@ -2,13 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://ysb5lvfag6hn" path="res://assets/prefabs/player.tscn" id="1_5kjdu"]
 [ext_resource type="PackedScene" uid="uid://5owr73mr7mac" path="res://assets/prefabs/baseEnemy.tscn" id="2_0vkvn"]
-[ext_resource type="PackedScene" uid="uid://biisjrgnsd4rl" path="res://assets/prefabs/crate.tscn" id="3_wspuf"]
-[ext_resource type="PackedScene" path="res://assets/prefabs/alcohol-barrel.tscn" id="4_5s7u7"]
-[ext_resource type="PackedScene" uid="uid://dbv0dswv54h50" path="res://assets/prefabs/barrel.tscn" id="5_6pogv"]
-[ext_resource type="PackedScene" path="res://assets/prefabs/plain-building.tscn" id="6_cwotx"]
-[ext_resource type="PackedScene" path="res://assets/prefabs/plain-building-risers.tscn" id="7_ha8vb"]
-[ext_resource type="PackedScene" uid="uid://d1kmqor3wbosf" path="res://assets/prefabs/ammoGraphic.tscn" id="8_skxs2"]
-[ext_resource type="PackedScene" uid="uid://b235xqsmomvds" path="res://assets/prefabs/healthGraphic.tscn" id="9_srimq"]
+[ext_resource type="PackedScene" uid="uid://dqmwsrmeuxwcf" path="res://assets/prefabs/crate.tscn" id="3_wspuf"]
+[ext_resource type="PackedScene" uid="uid://dfapc3nj4pfk2" path="res://assets/prefabs/alcohol-barrel.tscn" id="4_5s7u7"]
+[ext_resource type="PackedScene" uid="uid://bbcd6cd2lnexp" path="res://assets/prefabs/barrel.tscn" id="5_6pogv"]
+[ext_resource type="PackedScene" uid="uid://cjh8bmoqdabrj" path="res://assets/prefabs/plain-building.tscn" id="6_cwotx"]
+[ext_resource type="PackedScene" uid="uid://feimq2gthgmx" path="res://assets/prefabs/plain-building-risers.tscn" id="7_ha8vb"]
+[ext_resource type="PackedScene" path="res://assets/prefabs/ammoGraphic.tscn" id="8_skxs2"]
+[ext_resource type="PackedScene" path="res://assets/prefabs/healthGraphic.tscn" id="9_srimq"]
 
 [node name="shooter" type="Node2D"]
 
