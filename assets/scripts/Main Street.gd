@@ -14,12 +14,14 @@ func _process(delta):
 		visible = true;
 		if (!played):
 			get_node("twang").play();
+			get_node("wind").play();
 			played = true;
 	else:
 		visible = false;
 	
 	if (get_parent().sceneState != 2):
 		get_node("twang").stop();
+		get_node("wind").stop();
 	
 	if (get_parent().sceneState == 3 || get_parent().sceneState == 4 || get_parent().sceneState == 5) && (!playedMusic):
 		get_node("confrontation").playing = true;

@@ -33,4 +33,5 @@ func _input(event):
 
 
 func _on_timer_timeout():
-	sceneState += 1;
+	if (sceneState == 4):
+		sceneState += 1;

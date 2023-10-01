@@ -11,6 +11,6 @@ func _process(delta):
 	if (get_parent().visible):
 		rotate(-.05);
 		translate(Vector2(-3, 0));
-		if (global_position.x <= -300 && !done):
+		if (global_position.x <= -300 && !done && get_parent().get_parent().sceneState == 2):
 			get_parent().get_parent().sceneState += 1;
 			done = true

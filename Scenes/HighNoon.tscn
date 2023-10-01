@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://clbsyitixjhdl"]
+[gd_scene load_steps=24 format=3 uid="uid://clbsyitixjhdl"]
 
 [ext_resource type="Texture2D" uid="uid://d266bqax0a6xs" path="res://assets/Art/cinematic black.png" id="1_scals"]
 [ext_resource type="Script" path="res://assets/scripts/HighNoon.gd" id="1_whpuh"]
@@ -19,8 +19,10 @@
 [ext_resource type="Texture2D" uid="uid://cw7tgax2drx4n" path="res://assets/Art/textbox.png" id="12_k384o"]
 [ext_resource type="AudioStream" uid="uid://cbkw5g3qscpcp" path="res://assets/sounds/Confrontation at high noon.mp3" id="13_3yn3m"]
 [ext_resource type="FontFile" uid="uid://ducs5n0ihrmn5" path="res://assets/Font/WesternCarlo-axorm.otf" id="13_ioxip"]
+[ext_resource type="AudioStream" uid="uid://c0a8tfhxikyq6" path="res://assets/sounds/windy.mp3" id="14_5gqk1"]
 [ext_resource type="Script" path="res://assets/scripts/CharacterName.gd" id="16_fdn6q"]
 [ext_resource type="Script" path="res://assets/scripts/CharacterText.gd" id="16_y3b25"]
+[ext_resource type="Texture2D" uid="uid://flb8gf85p37i" path="res://assets/Art/Spacebar.png" id="23_ma40e"]
 
 [node name="HighNoon" type="Node2D"]
 script = ExtResource("1_whpuh")
@@ -65,6 +67,9 @@ stream = ExtResource("12_63l5k")
 [node name="confrontation" type="AudioStreamPlayer" parent="Main Street"]
 stream = ExtResource("13_3yn3m")
 volume_db = -23.284
+
+[node name="wind" type="AudioStreamPlayer" parent="Main Street"]
+stream = ExtResource("14_5gqk1")
 
 [node name="DRAW" type="Sprite2D" parent="."]
 position = Vector2(1000, 1000)
@@ -118,7 +123,16 @@ dialogue = "CHARACTER TEXT BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLA
 wait_time = 0.01
 one_shot = true
 
+[node name="SpacebarPrompt" type="TextureRect" parent="CanvasLayer/TextureRect"]
+layout_mode = 0
+offset_left = 1057.0
+offset_top = 304.0
+offset_right = 1157.0
+offset_bottom = 404.0
+texture = ExtResource("23_ma40e")
+
 [node name="Timer" type="Timer" parent="."]
+wait_time = 3.942
 one_shot = true
 
 [connection signal="finished" from="Clocktower/AudioStreamPlayer" to="Clocktower" method="_on_audio_stream_player_finished"]

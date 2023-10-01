@@ -29,7 +29,10 @@ func _process(delta):
 			currentTextPos = 0;
 		else:
 			if (currentTextPos < dialogue.length() && get_node("Timer").time_left <= 0):
+				get_parent().get_node("SpacebarPrompt").visible = false;
 				get_node("Timer").start();
+			elif (currentTextPos >= dialogue.length()):
+				get_parent().get_node("SpacebarPrompt").visible = true;
 	else:
 		alreadyInited = false;
 
@@ -37,6 +40,8 @@ func _process(delta):
 func _on_timer_timeout():
 	text += dialogue[currentTextPos];
 	currentTextPos += 1;
+	
+	get_parent().get_node("SpacebarPrompt").visible = false;
 	
 	audioOptions.shuffle();
 	get_node("AudioStreamPlayer").stream = audioOptions[0];
