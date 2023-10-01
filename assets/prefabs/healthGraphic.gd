@@ -13,6 +13,7 @@ func _process(delta):
 
 
 func updateHealth():
+	health-=1
 	for h in range(0,  hearts.size()):
 		if h <= health:
 			hearts[h].visible = true
