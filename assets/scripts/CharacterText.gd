@@ -3,6 +3,8 @@ extends Label
 var alreadyInited = false;
 var currentTextPos = 0;
 
+var audioOptions = [load("res://assets/sounds/keypress1.mp3"), load("res://assets/sounds/keypress2.mp3"), load("res://assets/sounds/keypress3.mp3")];
+
 @export var dialogue = "";
 
 # Called when the node enters the scene tree for the first time.
@@ -26,8 +28,17 @@ func _process(delta):
 			text = "";
 			currentTextPos = 0;
 		else:
-			if (currentTextPos < dialogue.length()):
-				text += dialogue[currentTextPos];
-				currentTextPos += 1;
+			if (currentTextPos < dialogue.length() && get_node("Timer").time_left <= 0):
+				get_node("Timer").start();
 	else:
 		alreadyInited = false;
+
+
+func _on_timer_timeout():
+	text += dialogue[currentTextPos];
+	currentTextPos += 1;
+	
+	audioOptions.shuffle();
+	get_node("AudioStreamPlayer").stream = audioOptions[0];
+	if (!get_node("AudioStreamPlayer").playing):
+		get_node("AudioStreamPlayer").play();

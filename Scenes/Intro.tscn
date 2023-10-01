@@ -57,6 +57,11 @@ theme_override_font_sizes/font_size = 55
 autowrap_mode = 2
 script = ExtResource("6_pb5xf")
 
+[node name="TextTimer" type="Timer" parent="CanvasLayer/TextureRect/RangerDialogue"]
+wait_time = 0.01
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/TextureRect/RangerDialogue"]
+
 [node name="SpacebarPrompt" type="TextureRect" parent="CanvasLayer/TextureRect"]
 layout_mode = 0
 offset_left = 1780.0
@@ -69,4 +74,5 @@ texture = ExtResource("7_mnah6")
 wait_time = 0.5
 autostart = true
 
+[connection signal="timeout" from="CanvasLayer/TextureRect/RangerDialogue/TextTimer" to="CanvasLayer/TextureRect/RangerDialogue" method="_on_text_timer_timeout"]
 [connection signal="timeout" from="CanvasLayer/TextureRect/SpacebarPrompt/Timer" to="CanvasLayer/TextureRect/RangerDialogue" method="_on_timer_timeout"]

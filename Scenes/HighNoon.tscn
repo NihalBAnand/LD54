@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://clbsyitixjhdl"]
+[gd_scene load_steps=22 format=3 uid="uid://clbsyitixjhdl"]
 
 [ext_resource type="Texture2D" uid="uid://d266bqax0a6xs" path="res://assets/Art/cinematic black.png" id="1_scals"]
 [ext_resource type="Script" path="res://assets/scripts/HighNoon.gd" id="1_whpuh"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dt1briyolrydl" path="res://assets/Art/tumble.png" id="4_4b8dd"]
 [ext_resource type="Script" path="res://assets/scripts/Clocktower.gd" id="4_n2dvn"]
 [ext_resource type="Texture2D" uid="uid://d02k2sdqkh13y" path="res://assets/Art/DRAW.png" id="4_q0cv8"]
+[ext_resource type="AudioStream" uid="uid://bcp6cjqkqyiw5" path="res://assets/sounds/clocktower.mp3" id="5_ajjyf"]
 [ext_resource type="Texture2D" uid="uid://vrfvee8ciem1" path="res://assets/Art/High_noon_on_main_street_no_villain.png" id="5_fsv28"]
 [ext_resource type="Script" path="res://assets/scripts/Tumble.gd" id="5_obmej"]
 [ext_resource type="Script" path="res://assets/scripts/Main Street.gd" id="6_vju6m"]
@@ -14,7 +15,9 @@
 [ext_resource type="Script" path="res://assets/scripts/DRAW.gd" id="10_b0ovr"]
 [ext_resource type="Script" path="res://assets/scripts/HighNoonCamera.gd" id="11_17wr0"]
 [ext_resource type="Script" path="res://assets/scripts/HighNoonUI.gd" id="12_5qryv"]
+[ext_resource type="AudioStream" uid="uid://c0hpwwengfpqj" path="res://assets/sounds/mainstreet.mp3" id="12_63l5k"]
 [ext_resource type="Texture2D" uid="uid://cw7tgax2drx4n" path="res://assets/Art/textbox.png" id="12_k384o"]
+[ext_resource type="AudioStream" uid="uid://cbkw5g3qscpcp" path="res://assets/sounds/Confrontation at high noon.mp3" id="13_3yn3m"]
 [ext_resource type="FontFile" uid="uid://ducs5n0ihrmn5" path="res://assets/Font/WesternCarlo-axorm.otf" id="13_ioxip"]
 [ext_resource type="Script" path="res://assets/scripts/CharacterName.gd" id="16_fdn6q"]
 [ext_resource type="Script" path="res://assets/scripts/CharacterText.gd" id="16_y3b25"]
@@ -28,11 +31,13 @@ scale = Vector2(500, 500)
 texture = ExtResource("1_scals")
 
 [node name="Clocktower" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(1000, 1000)
 scale = Vector2(1, 1.005)
 texture = ExtResource("2_1j15d")
 script = ExtResource("4_n2dvn")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Clocktower"]
+stream = ExtResource("5_ajjyf")
 
 [node name="Main Street" type="Sprite2D" parent="."]
 position = Vector2(1000, 1000)
@@ -40,7 +45,6 @@ texture = ExtResource("5_fsv28")
 script = ExtResource("6_vju6m")
 
 [node name="Tumble" type="Sprite2D" parent="Main Street"]
-visible = false
 position = Vector2(1093, 395)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("4_4b8dd")
@@ -54,6 +58,13 @@ position = Vector2(812, 119)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("9_6d683")
 script = ExtResource("10_apqrk")
+
+[node name="twang" type="AudioStreamPlayer" parent="Main Street"]
+stream = ExtResource("12_63l5k")
+
+[node name="confrontation" type="AudioStreamPlayer" parent="Main Street"]
+stream = ExtResource("13_3yn3m")
+volume_db = -23.284
 
 [node name="DRAW" type="Sprite2D" parent="."]
 position = Vector2(1000, 1000)
@@ -100,3 +111,16 @@ text = "CHARACTER TEXT BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BL
 autowrap_mode = 2
 script = ExtResource("16_y3b25")
 dialogue = "CHARACTER TEXT BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/TextureRect/CharacterText"]
+
+[node name="Timer" type="Timer" parent="CanvasLayer/TextureRect/CharacterText"]
+wait_time = 0.01
+one_shot = true
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="finished" from="Clocktower/AudioStreamPlayer" to="Clocktower" method="_on_audio_stream_player_finished"]
+[connection signal="timeout" from="CanvasLayer/TextureRect/CharacterText/Timer" to="CanvasLayer/TextureRect/CharacterText" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
