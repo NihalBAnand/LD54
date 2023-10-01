@@ -13,6 +13,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if (get_parent().get_parent().visible):
+		if (get_parent().get_parent().get_parent().sceneState == 5):
+			dialogue = get_node("/root/Global").characterDialogue[get_node("/root/Global").currentCharacter];
+		else:
+			dialogue = "Well, well, well, if it aint Insert Name Here. This town ain’t big enough for the both of us, pardner. *spit*"
+		
 		if (!alreadyInited):
 			alreadyInited = true;
 			text = "";

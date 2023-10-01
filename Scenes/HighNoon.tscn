@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://clbsyitixjhdl"]
+[gd_scene load_steps=19 format=3 uid="uid://clbsyitixjhdl"]
 
 [ext_resource type="Texture2D" uid="uid://d266bqax0a6xs" path="res://assets/Art/cinematic black.png" id="1_scals"]
 [ext_resource type="Script" path="res://assets/scripts/HighNoon.gd" id="1_whpuh"]
@@ -9,12 +9,14 @@
 [ext_resource type="Texture2D" uid="uid://vrfvee8ciem1" path="res://assets/Art/High_noon_on_main_street_no_villain.png" id="5_fsv28"]
 [ext_resource type="Script" path="res://assets/scripts/Tumble.gd" id="5_obmej"]
 [ext_resource type="Script" path="res://assets/scripts/Main Street.gd" id="6_vju6m"]
-[ext_resource type="Texture2D" uid="uid://bhkiduqfmpr0o" path="res://assets/Art/enemy_frame_1.png" id="9_iqj2w"]
+[ext_resource type="Texture2D" uid="uid://oockmrxdyx5k" path="res://assets/Art/Jackrabbit_Joe.png" id="9_6d683"]
+[ext_resource type="Script" path="res://assets/scripts/Villain.gd" id="10_apqrk"]
 [ext_resource type="Script" path="res://assets/scripts/DRAW.gd" id="10_b0ovr"]
 [ext_resource type="Script" path="res://assets/scripts/HighNoonCamera.gd" id="11_17wr0"]
 [ext_resource type="Script" path="res://assets/scripts/HighNoonUI.gd" id="12_5qryv"]
 [ext_resource type="Texture2D" uid="uid://cw7tgax2drx4n" path="res://assets/Art/textbox.png" id="12_k384o"]
 [ext_resource type="FontFile" uid="uid://ducs5n0ihrmn5" path="res://assets/Font/WesternCarlo-axorm.otf" id="13_ioxip"]
+[ext_resource type="Script" path="res://assets/scripts/CharacterName.gd" id="16_fdn6q"]
 [ext_resource type="Script" path="res://assets/scripts/CharacterText.gd" id="16_y3b25"]
 
 [node name="HighNoon" type="Node2D"]
@@ -48,7 +50,8 @@ position = Vector2(646, 123)
 
 [node name="Villain" type="Sprite2D" parent="Main Street"]
 position = Vector2(812, 119)
-texture = ExtResource("9_iqj2w")
+texture = ExtResource("9_6d683")
+script = ExtResource("10_apqrk")
 
 [node name="DRAW" type="Sprite2D" parent="."]
 visible = false
@@ -62,7 +65,6 @@ position = Vector2(1000, 1000)
 script = ExtResource("11_17wr0")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 script = ExtResource("12_5qryv")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
@@ -72,16 +74,17 @@ offset_right = 1826.0
 offset_bottom = 1947.0
 texture = ExtResource("12_k384o")
 
-[node name="Label" type="Label" parent="CanvasLayer/TextureRect"]
+[node name="CharacterName" type="Label" parent="CanvasLayer/TextureRect"]
 layout_mode = 0
-offset_left = 108.0
-offset_top = 15.0
-offset_right = 654.0
-offset_bottom = 110.0
+offset_left = 75.0
+offset_top = 21.0
+offset_right = 621.0
+offset_bottom = 116.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("13_ioxip")
 theme_override_font_sizes/font_size = 58
 text = "CHARACTER NAME"
+script = ExtResource("16_fdn6q")
 
 [node name="CharacterText" type="Label" parent="CanvasLayer/TextureRect"]
 layout_mode = 0
