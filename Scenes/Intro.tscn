@@ -13,7 +13,7 @@ texture = ExtResource("1_04nho")
 
 [node name="Sunset" type="Sprite2D" parent="."]
 position = Vector2(500, 500)
-scale = Vector2(0.496, 0.472079)
+scale = Vector2(0.992, 0.944)
 texture = ExtResource("1_36clf")
 flip_h = true
 
