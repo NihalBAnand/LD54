@@ -22,9 +22,6 @@ func _physics_process(delta):
 			self.position.x -= speed
 			get_node("Sprite2D").play("walk");
 		
-	
-
-	#print("fkjadsfjdskjafjkl")
 
 	move_and_slide()
 
@@ -42,5 +39,6 @@ func shoot():
 func applyDamage(damage: float) -> void:
 	health-= damage
 	if health<=0:
+		get_tree().change_scene_to_file("res://Scenes/HighNoon.tscn");
 		queue_free()
 	print(health)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bbshkf5t58wgq"]
+[gd_scene load_steps=11 format=3 uid="uid://bbshkf5t58wgq"]
 
 [ext_resource type="PackedScene" uid="uid://ysb5lvfag6hn" path="res://assets/prefabs/player.tscn" id="1_5kjdu"]
 [ext_resource type="PackedScene" uid="uid://5owr73mr7mac" path="res://assets/prefabs/baseEnemy.tscn" id="2_0vkvn"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://feimq2gthgmx" path="res://assets/prefabs/plain-building-risers.tscn" id="7_ha8vb"]
 [ext_resource type="PackedScene" path="res://assets/prefabs/ammoGraphic.tscn" id="8_skxs2"]
 [ext_resource type="PackedScene" path="res://assets/prefabs/healthGraphic.tscn" id="9_srimq"]
+[ext_resource type="Texture2D" uid="uid://cvpuvidc1tnj6" path="res://assets/Art/R.png" id="10_jndeo"]
 
 [node name="shooter" type="Node2D"]
 
@@ -67,3 +68,18 @@ scale = Vector2(0.6, 0.6)
 [node name="healthGraphic" parent="." instance=ExtResource("9_srimq")]
 position = Vector2(15, 53)
 scale = Vector2(0.3, 0.3)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ReloadPrompt" type="TextureRect" parent="CanvasLayer"]
+offset_left = 1902.0
+offset_top = 4.0
+offset_right = 2002.0
+offset_bottom = 104.0
+texture = ExtResource("10_jndeo")
+
+[node name="Timer" type="Timer" parent="CanvasLayer/ReloadPrompt"]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="CanvasLayer/ReloadPrompt/Timer" to="Player" method="_on_reload_prompt_timer_timeout"]

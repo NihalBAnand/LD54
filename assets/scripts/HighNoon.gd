@@ -11,3 +11,9 @@ func _input(event):
 	if event is InputEventKey and event.pressed:
 		if event.keycode == KEY_SPACE:
 			sceneState += 1;
+			if (sceneState > 7):
+				sceneState = 1;
+				get_node("/root/Global").currentCharacter += 1;
+				if (get_node("/root/Global").currentCharacter > 6):
+					get_node("/root/Global").currentCharacter = 0;
+				get_tree().change_scene_to_file("res://Scenes/shooter.tscn");

@@ -30,6 +30,7 @@ texture = ExtResource("1_scals")
 [node name="Clocktower" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(1000, 1000)
+scale = Vector2(1, 1.005)
 texture = ExtResource("2_1j15d")
 script = ExtResource("4_n2dvn")
 
@@ -50,11 +51,11 @@ position = Vector2(646, 123)
 
 [node name="Villain" type="Sprite2D" parent="Main Street"]
 position = Vector2(812, 119)
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("9_6d683")
 script = ExtResource("10_apqrk")
 
 [node name="DRAW" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(1000, 1000)
 texture = ExtResource("4_q0cv8")
 script = ExtResource("10_b0ovr")
@@ -68,10 +69,10 @@ script = ExtResource("11_17wr0")
 script = ExtResource("12_5qryv")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-offset_left = 128.0
-offset_top = 1297.0
-offset_right = 1826.0
-offset_bottom = 1947.0
+offset_left = 19.0
+offset_top = 1058.0
+offset_right = 1234.0
+offset_bottom = 1498.0
 texture = ExtResource("12_k384o")
 
 [node name="CharacterName" type="Label" parent="CanvasLayer/TextureRect"]
@@ -82,19 +83,19 @@ offset_right = 621.0
 offset_bottom = 116.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("13_ioxip")
-theme_override_font_sizes/font_size = 58
+theme_override_font_sizes/font_size = 35
 text = "CHARACTER NAME"
 script = ExtResource("16_fdn6q")
 
 [node name="CharacterText" type="Label" parent="CanvasLayer/TextureRect"]
 layout_mode = 0
-offset_left = 66.0
-offset_top = 133.0
-offset_right = 1631.0
-offset_bottom = 579.0
+offset_left = 72.0
+offset_top = 92.0
+offset_right = 1173.0
+offset_bottom = 398.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("13_ioxip")
-theme_override_font_sizes/font_size = 44
+theme_override_font_sizes/font_size = 30
 text = "CHARACTER TEXT BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH"
 autowrap_mode = 2
 script = ExtResource("16_y3b25")

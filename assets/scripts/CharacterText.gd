@@ -16,7 +16,10 @@ func _process(delta):
 		if (get_parent().get_parent().get_parent().sceneState == 5):
 			dialogue = get_node("/root/Global").characterDialogue[get_node("/root/Global").currentCharacter];
 		else:
-			dialogue = "Well, well, well, if it aint Insert Name Here. This town ain’t big enough for the both of us, pardner. *spit*"
+			if (get_node("/root/Global").currentCharacter == 3):
+				dialogue = "Well, well, well, if it ain't [Insert Name Here]. This town ain't big enough for the both of us, pardner. *spit*";
+			else:
+				dialogue = "Well, well, well, if it ain't the Arizona Ranger. This town ain't big enough for the both of us, pardner. *spit*";
 		
 		if (!alreadyInited):
 			alreadyInited = true;
