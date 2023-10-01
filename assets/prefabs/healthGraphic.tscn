@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b235xqsmomvds"]
+
+[ext_resource type="Script" path="res://assets/prefabs/healthGraphic.gd" id="1_7x8yt"]
+[ext_resource type="Texture2D" uid="uid://dcxcglior4xa1" path="res://assets/Art/heart.png" id="1_msemm"]
+
+[node name="healthGraphic" type="Node2D"]
+script = ExtResource("1_7x8yt")
+
+[node name="heart1" type="Sprite2D" parent="."]
+position = Vector2(135, 0)
+texture = ExtResource("1_msemm")
+
+[node name="heart2" type="Sprite2D" parent="."]
+position = Vector2(367, 0)
+texture = ExtResource("1_msemm")
+
+[node name="heart3" type="Sprite2D" parent="."]
+position = Vector2(599, 0)
+texture = ExtResource("1_msemm")

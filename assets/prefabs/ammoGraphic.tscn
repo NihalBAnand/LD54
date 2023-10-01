@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1kmqor3wbosf"]
+
+[ext_resource type="Script" path="res://assets/scripts/ammoGraphic.gd" id="1_4xy4q"]
+[ext_resource type="Texture2D" uid="uid://bt77mq53fq2gi" path="res://assets/Art/Bullet.png" id="1_7ay7t"]
+
+[node name="ammoGraphic" type="Node2D"]
+script = ExtResource("1_4xy4q")
+
+[node name="bullet1" type="Sprite2D" parent="."]
+position = Vector2(29, 76)
+rotation = -1.5708
+texture = ExtResource("1_7ay7t")
+
+[node name="bullet2" type="Sprite2D" parent="."]
+position = Vector2(81, 76)
+rotation = -1.5708
+texture = ExtResource("1_7ay7t")
+
+[node name="bullet3" type="Sprite2D" parent="."]
+position = Vector2(131, 76)
+rotation = -1.5708
+texture = ExtResource("1_7ay7t")
+
+[node name="bullet4" type="Sprite2D" parent="."]
+position = Vector2(183, 75)
+rotation = -1.5708
+texture = ExtResource("1_7ay7t")
+
+[node name="bullet5" type="Sprite2D" parent="."]
+position = Vector2(233, 74)
+rotation = -1.5708
+texture = ExtResource("1_7ay7t")
+
+[node name="bullet6" type="Sprite2D" parent="."]
+position = Vector2(287, 73)
+rotation = -1.5708
+texture = ExtResource("1_7ay7t")
+
+[node name="bullet7" type="Sprite2D" parent="."]
+position = Vector2(343, 73)
+rotation = -1.5708
+texture = ExtResource("1_7ay7t")
+
+[node name="bullet8" type="Sprite2D" parent="."]
+position = Vector2(399, 73)
+rotation = -1.5708
+texture = ExtResource("1_7ay7t")
