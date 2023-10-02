@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://dly6d7w3vapsm"]
+
+[ext_resource type="Script" path="res://assets/scripts/TitleScreen.gd" id="1_8d7g2"]
+[ext_resource type="Texture2D" uid="uid://d266bqax0a6xs" path="res://assets/Art/cinematic black.png" id="2_wh0fi"]
+[ext_resource type="FontFile" uid="uid://ducs5n0ihrmn5" path="res://assets/Font/WesternCarlo-axorm.otf" id="3_d5olh"]
+[ext_resource type="Texture2D" uid="uid://flb8gf85p37i" path="res://assets/Art/Spacebar.png" id="4_ul0dn"]
+
+[node name="TitleScreen" type="Node2D"]
+script = ExtResource("1_8d7g2")
+
+[node name="CinematicBlack" type="Sprite2D" parent="."]
+position = Vector2(978.5, 1065.75)
+scale = Vector2(439.4, 427.3)
+texture = ExtResource("2_wh0fi")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 39.0
+offset_right = 1906.0
+offset_bottom = 285.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_d5olh")
+theme_override_font_sizes/font_size = 100
+text = "INHS Presents:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 37.0
+offset_top = 288.0
+offset_right = 1904.0
+offset_bottom = 573.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_d5olh")
+theme_override_font_sizes/font_size = 300
+text = "SHOOTOUT!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 25.0
+offset_top = 506.0
+offset_right = 1892.0
+offset_bottom = 982.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_d5olh")
+theme_override_font_sizes/font_size = 150
+text = "At High Noon"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 768.0
+offset_top = 1187.0
+offset_right = 1125.0
+offset_bottom = 1451.0
+texture = ExtResource("4_ul0dn")
+
+[node name="Timer" type="Timer" parent="TextureRect"]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="TextureRect/Timer" to="." method="_on_timer_timeout"]

@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dqmwsrmeuxwcf" path="res://assets/prefabs/Level Items/crate.tscn" id="7_hgoa8"]
 [ext_resource type="PackedScene" uid="uid://dfapc3nj4pfk2" path="res://assets/prefabs/Level Items/alcohol-barrel.tscn" id="8_q24pn"]
 
-[node name="level7" type="Node2D"]
+[node name="Level7" type="Node2D"]
 
 [node name="Plain Building Risers" parent="." instance=ExtResource("1_v3h6h")]
 position = Vector2(185, 80)

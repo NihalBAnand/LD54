@@ -16,12 +16,18 @@ var health = 100
 func _physics_process(delta):
 	if !timerOn:
 		if abs(get_parent().get_node("Level" + str(get_node("/root/Global").currentCharacter) + "/PatrolPoint1").global_position.x - global_position.x) < 5 || abs(get_parent().get_node("Level" + str(get_node("/root/Global").currentCharacter) + "/PatrolPoint2").global_position.x - global_position.x) < 5:
-			timerOn = true;
-			dir *= -1;
-			get_node("waitTimer").start();
+			if (get_node("immuneTimer").time_left <= 0):
+				timerOn = true;
+				dir *= -1;
+				get_node("waitTimer").start();
+			else:
+				position.x += speed * dir;
 		if abs(get_parent().get_node("Level" + str(get_node("/root/Global").currentCharacter) + "/ShootPoint1").global_position.x - global_position.x) < 5 || abs(get_parent().get_node("Level" + str(get_node("/root/Global").currentCharacter) + "/ShootPoint2").global_position.x - global_position.x) < 5:
-			timerOn = true;
-			get_node("waitTimer").start();
+			if (get_node("immuneTimer").time_left <= 0):
+				timerOn = true;
+				get_node("waitTimer").start();
+			else:
+				position.x += speed * dir;
 		else:
 			position.x += speed * dir;
 		
@@ -56,3 +62,4 @@ func applyDamage(damage: float) -> void:
 
 func _on_wait_timer_timeout():
 	timerOn = false;
+	get_node("immuneTimer").start();

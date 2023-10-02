@@ -70,6 +70,7 @@ func _process(delta):
 				currentLevel = load("res://assets/prefabs/Levels/level_7.tscn").instantiate();
 				add_child(currentLevel);
 				move_child(currentLevel, 0);
+				print(currentLevel)
 				
 				var enemy = load("res://assets/prefabs/Enemies and Players/smartEnemy.tscn").instantiate();
 				add_child(enemy);
