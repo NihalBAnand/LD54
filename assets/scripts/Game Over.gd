@@ -6,9 +6,10 @@ func _ready():
 	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	if Input.is_action_just_pressed("shoot"): get_tree().change_scene_to_file("res://Scenes/intro.tscn");
+func _input(event):
+	if event is InputEventKey and event.pressed:
+		if event.keycode == KEY_SPACE:
+			get_tree().change_scene_to_file("res://Scenes/Intro.tscn");
 
 
 func _on_timer_timeout():
