@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bbshkf5t58wgq"]
+[gd_scene load_steps=7 format=3 uid="uid://bbshkf5t58wgq"]
 
 [ext_resource type="PackedScene" uid="uid://ysb5lvfag6hn" path="res://assets/prefabs/Enemies and Players/player.tscn" id="1_5kjdu"]
 [ext_resource type="Script" path="res://assets/scripts/shooter.gd" id="1_rhw80"]
+[ext_resource type="AudioStream" uid="uid://bu0b3u2nllp4n" path="res://assets/sounds/Shootout music .mp3" id="6_36m04"]
 [ext_resource type="PackedScene" uid="uid://d1kmqor3wbosf" path="res://assets/prefabs/Graphics/ammoGraphic.tscn" id="8_skxs2"]
 [ext_resource type="PackedScene" uid="uid://b235xqsmomvds" path="res://assets/prefabs/Graphics/healthGraphic.tscn" id="9_srimq"]
 [ext_resource type="Texture2D" uid="uid://cvpuvidc1tnj6" path="res://assets/Art/R.png" id="10_jndeo"]
@@ -36,5 +37,9 @@ autostart = true
 
 [node name="EnemySpawn" type="Marker2D" parent="."]
 position = Vector2(978, 1774)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_36m04")
+volume_db = 1.0
 
 [connection signal="timeout" from="CanvasLayer/ReloadPrompt/Timer" to="Player" method="_on_reload_prompt_timer_timeout"]
