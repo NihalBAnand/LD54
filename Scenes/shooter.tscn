@@ -1,15 +1,14 @@
 [gd_scene load_steps=7 format=3 uid="uid://bbshkf5t58wgq"]
 
 [ext_resource type="PackedScene" uid="uid://ysb5lvfag6hn" path="res://assets/prefabs/Enemies and Players/player.tscn" id="1_5kjdu"]
+[ext_resource type="Script" path="res://assets/scripts/shooter.gd" id="1_rhw80"]
 [ext_resource type="PackedScene" uid="uid://5owr73mr7mac" path="res://assets/prefabs/Enemies and Players/baseEnemy.tscn" id="2_0vkvn"]
-[ext_resource type="PackedScene" uid="uid://cfecs8o6lfa4k" path="res://assets/prefabs/Levels/level_1.tscn" id="6_1rf7x"]
 [ext_resource type="PackedScene" uid="uid://d1kmqor3wbosf" path="res://assets/prefabs/Graphics/ammoGraphic.tscn" id="8_skxs2"]
 [ext_resource type="PackedScene" uid="uid://b235xqsmomvds" path="res://assets/prefabs/Graphics/healthGraphic.tscn" id="9_srimq"]
 [ext_resource type="Texture2D" uid="uid://cvpuvidc1tnj6" path="res://assets/Art/R.png" id="10_jndeo"]
 
 [node name="shooter" type="Node2D"]
-
-[node name="Level1" parent="." instance=ExtResource("6_1rf7x")]
+script = ExtResource("1_rhw80")
 
 [node name="Player" parent="." instance=ExtResource("1_5kjdu")]
 position = Vector2(1000, 122)
