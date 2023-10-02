@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://xdtlvka5gvsh"]
+[gd_scene load_steps=9 format=3 uid="uid://xdtlvka5gvsh"]
 
 [ext_resource type="Texture2D" uid="uid://d266bqax0a6xs" path="res://assets/Art/cinematic black.png" id="1_04nho"]
 [ext_resource type="Texture2D" uid="uid://mc20okblky6w" path="res://assets/Art/sunset.png" id="1_36clf"]
@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://ducs5n0ihrmn5" path="res://assets/Font/WesternCarlo-axorm.otf" id="5_yx11e"]
 [ext_resource type="Script" path="res://assets/scripts/RangerDialogue.gd" id="6_pb5xf"]
 [ext_resource type="Texture2D" uid="uid://flb8gf85p37i" path="res://assets/Art/Spacebar.png" id="7_mnah6"]
+[ext_resource type="AudioStream" uid="uid://bso88rkq8biat" path="res://assets/sounds/intro.mp3" id="8_d61hs"]
 
 [node name="Intro" type="Node2D"]
 
@@ -74,6 +75,10 @@ texture = ExtResource("7_mnah6")
 [node name="Timer" type="Timer" parent="CanvasLayer/TextureRect/SpacebarPrompt"]
 wait_time = 0.5
 autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_d61hs")
+autoplay = true
 
 [connection signal="timeout" from="CanvasLayer/TextureRect/RangerDialogue/TextTimer" to="CanvasLayer/TextureRect/RangerDialogue" method="_on_text_timer_timeout"]
 [connection signal="timeout" from="CanvasLayer/TextureRect/SpacebarPrompt/Timer" to="CanvasLayer/TextureRect/RangerDialogue" method="_on_timer_timeout"]

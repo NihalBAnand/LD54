@@ -1,29 +1,30 @@
-[gd_scene load_steps=8 format=3 uid="uid://3yqi8i31l0p3"]
+[gd_scene load_steps=9 format=3 uid="uid://3yqi8i31l0p3"]
 
-[ext_resource type="Texture2D" uid="uid://d266bqax0a6xs" path="res://assets/Art/cinematic black.png" id="1_vd03m"]
-[ext_resource type="Texture2D" uid="uid://mc20okblky6w" path="res://assets/Art/sunset.png" id="2_rqprq"]
-[ext_resource type="Script" path="res://assets/scripts/introCamera.gd" id="3_pmiub"]
-[ext_resource type="Texture2D" uid="uid://cw7tgax2drx4n" path="res://assets/Art/textbox.png" id="4_13w2w"]
-[ext_resource type="FontFile" uid="uid://ducs5n0ihrmn5" path="res://assets/Font/WesternCarlo-axorm.otf" id="5_7ywl3"]
-[ext_resource type="Script" path="res://assets/scripts/RangerDialogueEpilogue.gd" id="6_rprfl"]
-[ext_resource type="Texture2D" uid="uid://flb8gf85p37i" path="res://assets/Art/Spacebar.png" id="7_kwo8e"]
+[ext_resource type="Texture2D" uid="uid://d266bqax0a6xs" path="res://assets/Art/cinematic black.png" id="1_jtlj8"]
+[ext_resource type="Texture2D" uid="uid://mc20okblky6w" path="res://assets/Art/sunset.png" id="2_0ef7k"]
+[ext_resource type="Script" path="res://assets/scripts/introCamera.gd" id="3_omvcg"]
+[ext_resource type="Texture2D" uid="uid://cw7tgax2drx4n" path="res://assets/Art/textbox.png" id="4_fcwql"]
+[ext_resource type="FontFile" uid="uid://ducs5n0ihrmn5" path="res://assets/Font/WesternCarlo-axorm.otf" id="5_y23cy"]
+[ext_resource type="Script" path="res://assets/scripts/RangerDialogueEpilogue.gd" id="6_gnemg"]
+[ext_resource type="Texture2D" uid="uid://flb8gf85p37i" path="res://assets/Art/Spacebar.png" id="7_vjhsh"]
+[ext_resource type="AudioStream" uid="uid://cdxt1qafi70e2" path="res://assets/sounds/epilogue.mp3" id="8_poep2"]
 
 [node name="Intro" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1059, 597)
 scale = Vector2(500, 500)
-texture = ExtResource("1_vd03m")
+texture = ExtResource("1_jtlj8")
 
 [node name="Sunset" type="Sprite2D" parent="."]
 position = Vector2(1000, 500)
 scale = Vector2(1, 0.821)
-texture = ExtResource("2_rqprq")
+texture = ExtResource("2_0ef7k")
 flip_h = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1000, 500)
-script = ExtResource("3_pmiub")
+script = ExtResource("3_omvcg")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -32,7 +33,7 @@ offset_left = -7.0
 offset_top = 1509.0
 offset_right = 2012.0
 offset_bottom = 1977.0
-texture = ExtResource("4_13w2w")
+texture = ExtResource("4_fcwql")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
@@ -42,7 +43,7 @@ offset_left = 114.0
 offset_right = 709.0
 offset_bottom = 97.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_7ywl3")
+theme_override_fonts/font = ExtResource("5_y23cy")
 theme_override_font_sizes/font_size = 59
 text = "The Ranger"
 
@@ -53,10 +54,10 @@ offset_top = 89.0
 offset_right = 1941.0
 offset_bottom = 468.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_7ywl3")
+theme_override_fonts/font = ExtResource("5_y23cy")
 theme_override_font_sizes/font_size = 55
 autowrap_mode = 2
-script = ExtResource("6_rprfl")
+script = ExtResource("6_gnemg")
 
 [node name="TextTimer" type="Timer" parent="CanvasLayer/TextureRect/RangerDialogue"]
 wait_time = 0.01
@@ -69,11 +70,15 @@ offset_left = 1780.0
 offset_top = 276.0
 offset_right = 1930.0
 offset_bottom = 426.0
-texture = ExtResource("7_kwo8e")
+texture = ExtResource("7_vjhsh")
 
 [node name="Timer" type="Timer" parent="CanvasLayer/TextureRect/SpacebarPrompt"]
 wait_time = 0.5
 autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_poep2")
+autoplay = true
 
 [connection signal="timeout" from="CanvasLayer/TextureRect/RangerDialogue/TextTimer" to="CanvasLayer/TextureRect/RangerDialogue" method="_on_text_timer_timeout"]
 [connection signal="timeout" from="CanvasLayer/TextureRect/SpacebarPrompt/Timer" to="CanvasLayer/TextureRect/RangerDialogue" method="_on_timer_timeout"]
