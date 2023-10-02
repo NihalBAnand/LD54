@@ -38,8 +38,9 @@ func _physics_process(delta):
 	get_input()
 	move_and_slide()
 	if Input.is_action_just_pressed("shoot") && (canShoot) && ammo.ammo>=0: shoot()
+	if Input.is_action_just_pressed("shoot") && (canShoot) && ammo.ammo<0: $NoBullets.play()
 	
-	if Input.is_action_just_pressed("reload"):
+	if Input.is_action_just_pressed("reload"): 
 		ammo.updateAmmo(true)
 		
 	if velocity != Vector2(0, 0):
