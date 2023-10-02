@@ -47,7 +47,7 @@ position = Vector2(98.5, 168)
 shape = SubResource("RectangleShape2D_wj2rt")
 
 [node name="shootTimer" type="Timer" parent="."]
-wait_time = 0.6
+wait_time = 0.4
 autostart = true
 
 [node name="enemyBulletSpawn" type="Marker2D" parent="."]

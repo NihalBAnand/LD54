@@ -86,7 +86,6 @@ scale = Vector2(0.2, 0.2)
 
 [node name="Horse And Carriage" parent="." instance=ExtResource("9_flepr")]
 position = Vector2(2261, 837)
-scale = Vector2(0.4, 0.4)
 
 [node name="Horse And Carriage2" parent="." instance=ExtResource("9_flepr")]
 position = Vector2(1875, 1466)
