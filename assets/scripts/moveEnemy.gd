@@ -4,26 +4,21 @@ extends CharacterBody2D
 @export var enemyBullet: PackedScene
 @onready var spawn_point: Marker2D = $enemyBulletSpawn
 
-const speed = 1
+const speed = 1;
+var dir = 1;
+
+var timerOn = false;
 
 @export var player: PackedScene
 
 var health = 100
 
 func _physics_process(delta):
-	if get_parent().get_node("Player"):
-		if abs(get_parent().get_node("Player").global_position.x - global_position.x) < 5:
-			self.position.x += 0;
-			get_node("Sprite2D").play("idle");
-		elif  get_parent().get_node("Player").global_position.x> self.global_position.x:
-			self.position.x += speed
-			get_node("Sprite2D").play("walk");
-		elif get_parent().get_node("Player").global_position.x < self.global_position.x:
-			self.position.x -= speed
-			get_node("Sprite2D").play("walk");
-		
-
-	move_and_slide()
+	translate(Vector2(speed * dir, 0));
+	
+	var collision = move_and_slide();
+	if (collision):
+		dir *= -1;
 
 
 func _on_shoot_timer_timeout():
@@ -46,3 +41,5 @@ func applyDamage(damage: float) -> void:
 		get_tree().change_scene_to_file("res://Scenes/HighNoon.tscn");
 		queue_free()
 	print(health)
+
+

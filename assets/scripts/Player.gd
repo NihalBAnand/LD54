@@ -56,7 +56,9 @@ func shoot():
 	canShoot = false
 	delayTimer.start()
 	
-	
+	var smoke = load("res://assets/prefabs/Enemies and Players/Smoke.tscn").instantiate();
+	add_child(smoke);
+	smoke.position = spawn_point.position;
 
 func _on_delay_complete():
 	canShoot = true

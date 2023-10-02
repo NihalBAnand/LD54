@@ -8,7 +8,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_suvl1"]
 size = Vector2(1102, 496)
 
-[node name="Horse And Carriage" type="StaticBody2D"]
+[node name="Horse And Carriage" type="StaticBody2D" groups=["scenery"]]
 script = ExtResource("1_cuvwm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

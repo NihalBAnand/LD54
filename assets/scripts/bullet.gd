@@ -14,6 +14,8 @@ func _physics_process(delta):
 	position += transform.y*speed
 
 func _on_body_entered(body):
-	if body.is_in_group("ppl"):
-		body.applyDamage(20)
-	queue_free()
+	if body.is_in_group("enemies"):
+		body.applyDamage(20);
+		queue_free();
+	elif (body.is_in_group("scenery")):
+		queue_free();

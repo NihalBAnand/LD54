@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rdy4i"]
 size = Vector2(419, 515)
 
-[node name="barrel" type="StaticBody2D"]
+[node name="barrel" type="StaticBody2D" groups=["scenery"]]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_58u4q")

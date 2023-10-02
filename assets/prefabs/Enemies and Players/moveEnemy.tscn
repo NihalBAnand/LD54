@@ -1,16 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://5owr73mr7mac"]
+[gd_scene load_steps=7 format=3 uid="uid://o4k0wdenbvke"]
 
-[ext_resource type="Script" path="res://assets/scripts/baseEnemy.gd" id="1_cw5j7"]
-[ext_resource type="PackedScene" uid="uid://b573fvrle16td" path="res://assets/prefabs/Enemies and Players/enemyBullet.tscn" id="2_hm1yb"]
-[ext_resource type="PackedScene" uid="uid://ysb5lvfag6hn" path="res://assets/prefabs/Enemies and Players/player.tscn" id="2_y2206"]
-[ext_resource type="Texture2D" uid="uid://bhkiduqfmpr0o" path="res://assets/Art/enemy_frame_1.png" id="4_i0v1g"]
-[ext_resource type="Texture2D" uid="uid://bmyccvp7tay8k" path="res://assets/Art/enemy_frame_2.png" id="5_2h3cc"]
+[ext_resource type="Script" path="res://assets/scripts/moveEnemy.gd" id="1_axbfe"]
+[ext_resource type="Texture2D" uid="uid://bhkiduqfmpr0o" path="res://assets/Art/enemy_frame_1.png" id="2_k6vf0"]
+[ext_resource type="PackedScene" uid="uid://b573fvrle16td" path="res://assets/prefabs/Enemies and Players/enemyBullet.tscn" id="2_wr48v"]
+[ext_resource type="Texture2D" uid="uid://bmyccvp7tay8k" path="res://assets/Art/enemy_frame_2.png" id="3_5n2vb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4pe63"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_i0v1g")
+"texture": ExtResource("2_k6vf0")
 }],
 "loop": true,
 "name": &"idle",
@@ -18,10 +17,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_2h3cc")
+"texture": ExtResource("3_5n2vb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_i0v1g")
+"texture": ExtResource("2_k6vf0")
 }],
 "loop": true,
 "name": &"walk",
@@ -31,11 +30,10 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wj2rt"]
 size = Vector2(195, 332)
 
-[node name="baseEnemy" type="CharacterBody2D" groups=["enemies"]]
+[node name="moveEnemy" type="CharacterBody2D" groups=["enemies"]]
 position = Vector2(1, 0)
-script = ExtResource("1_cw5j7")
-enemyBullet = ExtResource("2_hm1yb")
-player = ExtResource("2_y2206")
+script = ExtResource("1_axbfe")
+enemyBullet = ExtResource("2_wr48v")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(103.5, 174.5)

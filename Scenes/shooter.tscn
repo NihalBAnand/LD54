@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bbshkf5t58wgq"]
+[gd_scene load_steps=6 format=3 uid="uid://bbshkf5t58wgq"]
 
 [ext_resource type="PackedScene" uid="uid://ysb5lvfag6hn" path="res://assets/prefabs/Enemies and Players/player.tscn" id="1_5kjdu"]
 [ext_resource type="Script" path="res://assets/scripts/shooter.gd" id="1_rhw80"]
-[ext_resource type="PackedScene" uid="uid://5owr73mr7mac" path="res://assets/prefabs/Enemies and Players/baseEnemy.tscn" id="2_0vkvn"]
 [ext_resource type="PackedScene" uid="uid://d1kmqor3wbosf" path="res://assets/prefabs/Graphics/ammoGraphic.tscn" id="8_skxs2"]
 [ext_resource type="PackedScene" uid="uid://b235xqsmomvds" path="res://assets/prefabs/Graphics/healthGraphic.tscn" id="9_srimq"]
 [ext_resource type="Texture2D" uid="uid://cvpuvidc1tnj6" path="res://assets/Art/R.png" id="10_jndeo"]
@@ -13,10 +12,6 @@ script = ExtResource("1_rhw80")
 [node name="Player" parent="." instance=ExtResource("1_5kjdu")]
 position = Vector2(1000, 122)
 scale = Vector2(1, 0.736)
-
-[node name="baseEnemy" parent="." instance=ExtResource("2_0vkvn")]
-position = Vector2(949, 1796)
-scale = Vector2(0.6, 0.6)
 
 [node name="ammoGraphic" parent="." instance=ExtResource("8_skxs2")]
 position = Vector2(1733, 9)
@@ -38,5 +33,8 @@ texture = ExtResource("10_jndeo")
 [node name="Timer" type="Timer" parent="CanvasLayer/ReloadPrompt"]
 wait_time = 0.5
 autostart = true
+
+[node name="EnemySpawn" type="Marker2D" parent="."]
+position = Vector2(978, 1774)
 
 [connection signal="timeout" from="CanvasLayer/ReloadPrompt/Timer" to="Player" method="_on_reload_prompt_timer_timeout"]
