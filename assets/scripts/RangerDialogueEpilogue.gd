@@ -19,7 +19,7 @@ func _process(delta):
 	if (currentTextPos < dialogue[currentDialogueItem].length() && get_node("TextTimer").time_left <= 0):
 		get_node("TextTimer").start();
 		get_parent().get_node("SpacebarPrompt").visible = false;
-	else:
+	elif (currentTextPos >= dialogue[currentDialogueItem].length()):
 		get_parent().get_node("SpacebarPrompt").visible = true;
 
 func _input(event):

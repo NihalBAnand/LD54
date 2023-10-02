@@ -1,11 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://b41j43l7lfk7d"]
+[gd_scene load_steps=5 format=3 uid="uid://b41j43l7lfk7d"]
 
 [ext_resource type="FontFile" uid="uid://ducs5n0ihrmn5" path="res://assets/Font/WesternCarlo-axorm.otf" id="1_3fcgb"]
 [ext_resource type="Script" path="res://assets/scripts/Game Over.gd" id="1_v670p"]
+[ext_resource type="Texture2D" uid="uid://d266bqax0a6xs" path="res://assets/Art/cinematic black.png" id="2_aobvv"]
 [ext_resource type="Texture2D" uid="uid://flb8gf85p37i" path="res://assets/Art/Spacebar.png" id="2_pwhlu"]
 
 [node name="Game Over" type="Node2D"]
 script = ExtResource("1_v670p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1036, 972.375)
+scale = Vector2(447.7, 441.75)
+texture = ExtResource("2_aobvv")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_left = 341.0
@@ -19,8 +25,23 @@ text = "GAME OVER
 scroll_active = false
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 1288.0
-offset_top = 1301.0
-offset_right = 1514.0
-offset_bottom = 1456.0
+offset_left = 868.0
+offset_top = 1368.0
+offset_right = 1094.0
+offset_bottom = 1523.0
 texture = ExtResource("2_pwhlu")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 705.0
+offset_top = 1132.0
+offset_right = 1274.0
+offset_bottom = 1294.0
+theme_override_fonts/font = ExtResource("1_3fcgb")
+theme_override_font_sizes/font_size = 100
+text = "Play Again?"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
