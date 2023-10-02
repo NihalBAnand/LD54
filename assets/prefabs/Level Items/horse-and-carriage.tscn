@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://cts5fe6rstfh5"]
+
+[ext_resource type="Script" path="res://assets/scripts/Wagon.gd" id="1_cuvwm"]
+[ext_resource type="Texture2D" uid="uid://cyoy2m64pwdre" path="res://assets/Art/horse_and_wagon.png" id="1_yknk5"]
+[ext_resource type="Texture2D" uid="uid://cm0v73r4812mo" path="res://assets/Art/wagon_wheel.png" id="2_skwyp"]
+[ext_resource type="Script" path="res://assets/scripts/Wheel.gd" id="3_yh7ld"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_suvl1"]
+size = Vector2(1102, 496)
+
+[node name="Horse And Carriage" type="StaticBody2D"]
+script = ExtResource("1_cuvwm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yknk5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(119, 175)
+scale = Vector2(0.383333, 0.39)
+texture = ExtResource("2_skwyp")
+script = ExtResource("3_yh7ld")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(429, 175)
+scale = Vector2(0.383333, 0.39)
+texture = ExtResource("2_skwyp")
+script = ExtResource("3_yh7ld")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-7, 29)
+shape = SubResource("RectangleShape2D_suvl1")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.185
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
