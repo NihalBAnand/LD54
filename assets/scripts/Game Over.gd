@@ -9,7 +9,6 @@ func _ready():
 func _input(event):
 	if event is InputEventKey and event.pressed:
 		if event.keycode == KEY_SPACE:
-			get_node("/root/Global").currentCharacter = 0;
 			get_tree().change_scene_to_file("res://Scenes/Intro.tscn");
 
 
