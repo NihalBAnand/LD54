@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var enemyBullet: PackedScene
 @onready var spawn_point: Marker2D = $enemyBulletSpawn
 
-const speed = 1
+const speed = 2;
 
 @export var player: PackedScene
 

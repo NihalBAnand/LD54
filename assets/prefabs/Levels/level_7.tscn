@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dqmwsrmeuxwcf" path="res://assets/prefabs/Level Items/crate.tscn" id="7_hgoa8"]
 [ext_resource type="PackedScene" uid="uid://dfapc3nj4pfk2" path="res://assets/prefabs/Level Items/alcohol-barrel.tscn" id="8_q24pn"]
 
-[node name="level_7" type="Node2D"]
+[node name="level7" type="Node2D"]
 
 [node name="Plain Building Risers" parent="." instance=ExtResource("1_v3h6h")]
 position = Vector2(185, 80)
@@ -78,3 +78,15 @@ scale = Vector2(0.3, 0.3)
 [node name="crate10" parent="." instance=ExtResource("7_hgoa8")]
 position = Vector2(1450, 556)
 scale = Vector2(0.3, 0.3)
+
+[node name="PatrolPoint1" type="Marker2D" parent="."]
+position = Vector2(451, 1564)
+
+[node name="PatrolPoint2" type="Marker2D" parent="."]
+position = Vector2(1564, 1854)
+
+[node name="ShootPoint1" type="Marker2D" parent="."]
+position = Vector2(585, 1553)
+
+[node name="ShootPoint2" type="Marker2D" parent="."]
+position = Vector2(1028, 1566)

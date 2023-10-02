@@ -13,4 +13,9 @@ func _process(delta):
 		translate(Vector2(-3, 0));
 		if (global_position.x <= -300 && !done && get_parent().get_parent().sceneState == 2):
 			get_parent().get_parent().sceneState += 1;
-			done = true
+			done = true;
+	
+	if (get_node("/root/Global").currentCharacter == 3):
+		texture = load("res://assets/Art/Shitty Tumbleweed.png");
+	else:
+		texture = load("res://assets/Art/tumble.png");
