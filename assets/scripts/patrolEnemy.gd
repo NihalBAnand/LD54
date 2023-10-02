@@ -21,7 +21,6 @@ func _physics_process(delta):
 				get_node("waitTimer").start();
 			else:
 				position.x += speed * dir;
-				print(get_node("immuneTimer").time_left)
 		else:
 			position.x += speed * dir;
 		
@@ -34,8 +33,9 @@ func _on_shoot_timer_timeout():
 
 
 func shoot():
-	var b: enemyBullet = enemyBullet.instantiate()
-	b.position = spawn_point.global_position;
+	var b: enemyBullet = enemyBullet.instantiate();
+	get_parent().add_child(b);
+	b.global_transform = spawn_point.global_transform;
 	
 	var smoke = load("res://assets/prefabs/Enemies and Players/Smoke.tscn").instantiate();
 	add_child(smoke);

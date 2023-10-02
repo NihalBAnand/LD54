@@ -27,8 +27,8 @@ func _on_shoot_timer_timeout():
 
 func shoot():
 	var b: enemyBullet = enemyBullet.instantiate()
-	add_child(b)
-	b.transform = spawn_point.transform
+	get_parent().add_child(b);
+	b.global_transform = spawn_point.global_transform
 	
 	var smoke = load("res://assets/prefabs/Enemies and Players/Smoke.tscn").instantiate();
 	add_child(smoke);
