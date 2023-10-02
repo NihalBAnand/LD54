@@ -1,6 +1,6 @@
 extends Node
 
-var currentCharacter = 6;
+var currentCharacter = 0;
 
 var characterNames = ["Jackrabbit Joe", "Catastrophe Lainie", "Sergio Valerii", "Prospector Jenkins", "Yellowstone Matt", "Sammy the Kid", "Texas Red"];
 
