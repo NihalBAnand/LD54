@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://mpgac838e0e1"]
+
+[ext_resource type="Texture2D" uid="uid://cj6cl5rq2xx0o" path="res://assets/Art/Lawyur_building.png" id="1_b1mw5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jgyj4"]
+size = Vector2(1045, 1483)
+
+[node name="Lawyur Building" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_b1mw5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-104.5, -4.5)
+shape = SubResource("RectangleShape2D_jgyj4")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc462pmhctb0m"]
+
+[ext_resource type="Texture2D" uid="uid://csnwib4n7j4u6" path="res://assets/Art/general_store_building.png" id="1_dmxyf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_egqew"]
+size = Vector2(962, 1426)
+
+[node name="General Store Building" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_dmxyf")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(145, -31)
+shape = SubResource("RectangleShape2D_egqew")

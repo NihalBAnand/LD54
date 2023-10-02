@@ -1,17 +1,15 @@
-[gd_scene load_steps=11 format=3 uid="uid://bbshkf5t58wgq"]
+[gd_scene load_steps=7 format=3 uid="uid://bbshkf5t58wgq"]
 
-[ext_resource type="PackedScene" uid="uid://ysb5lvfag6hn" path="res://assets/prefabs/player.tscn" id="1_5kjdu"]
-[ext_resource type="PackedScene" uid="uid://5owr73mr7mac" path="res://assets/prefabs/baseEnemy.tscn" id="2_0vkvn"]
-[ext_resource type="PackedScene" uid="uid://dqmwsrmeuxwcf" path="res://assets/prefabs/crate.tscn" id="3_wspuf"]
-[ext_resource type="PackedScene" uid="uid://dfapc3nj4pfk2" path="res://assets/prefabs/alcohol-barrel.tscn" id="4_5s7u7"]
-[ext_resource type="PackedScene" uid="uid://bbcd6cd2lnexp" path="res://assets/prefabs/barrel.tscn" id="5_6pogv"]
-[ext_resource type="PackedScene" uid="uid://cjh8bmoqdabrj" path="res://assets/prefabs/plain-building.tscn" id="6_cwotx"]
-[ext_resource type="PackedScene" uid="uid://feimq2gthgmx" path="res://assets/prefabs/plain-building-risers.tscn" id="7_ha8vb"]
-[ext_resource type="PackedScene" path="res://assets/prefabs/ammoGraphic.tscn" id="8_skxs2"]
-[ext_resource type="PackedScene" path="res://assets/prefabs/healthGraphic.tscn" id="9_srimq"]
+[ext_resource type="PackedScene" uid="uid://ysb5lvfag6hn" path="res://assets/prefabs/Enemies and Players/player.tscn" id="1_5kjdu"]
+[ext_resource type="PackedScene" uid="uid://5owr73mr7mac" path="res://assets/prefabs/Enemies and Players/baseEnemy.tscn" id="2_0vkvn"]
+[ext_resource type="PackedScene" uid="uid://cfecs8o6lfa4k" path="res://assets/prefabs/Levels/level_1.tscn" id="6_1rf7x"]
+[ext_resource type="PackedScene" uid="uid://d1kmqor3wbosf" path="res://assets/prefabs/Graphics/ammoGraphic.tscn" id="8_skxs2"]
+[ext_resource type="PackedScene" uid="uid://b235xqsmomvds" path="res://assets/prefabs/Graphics/healthGraphic.tscn" id="9_srimq"]
 [ext_resource type="Texture2D" uid="uid://cvpuvidc1tnj6" path="res://assets/Art/R.png" id="10_jndeo"]
 
 [node name="shooter" type="Node2D"]
+
+[node name="Level1" parent="." instance=ExtResource("6_1rf7x")]
 
 [node name="Player" parent="." instance=ExtResource("1_5kjdu")]
 position = Vector2(1000, 122)
@@ -20,46 +18,6 @@ scale = Vector2(1, 0.736)
 [node name="baseEnemy" parent="." instance=ExtResource("2_0vkvn")]
 position = Vector2(949, 1796)
 scale = Vector2(0.6, 0.6)
-
-[node name="crate" parent="." instance=ExtResource("3_wspuf")]
-position = Vector2(1419, 1144)
-scale = Vector2(0.3, 0.3)
-
-[node name="crate2" parent="." instance=ExtResource("3_wspuf")]
-position = Vector2(1418, 1061)
-scale = Vector2(0.3, 0.3)
-
-[node name="crate3" parent="." instance=ExtResource("3_wspuf")]
-position = Vector2(1514, 1145)
-scale = Vector2(0.3, 0.3)
-
-[node name="crate4" parent="." instance=ExtResource("3_wspuf")]
-position = Vector2(1512, 1059)
-scale = Vector2(0.3, 0.3)
-
-[node name="crate5" parent="." instance=ExtResource("3_wspuf")]
-position = Vector2(1510, 972)
-scale = Vector2(0.3, 0.3)
-
-[node name="crate6" parent="." instance=ExtResource("3_wspuf")]
-position = Vector2(1612, 1143)
-scale = Vector2(0.3, 0.3)
-
-[node name="barrel" parent="." instance=ExtResource("4_5s7u7")]
-position = Vector2(663, 932)
-scale = Vector2(0.2, 0.2)
-
-[node name="barrel2" parent="." instance=ExtResource("5_6pogv")]
-position = Vector2(663, 830)
-scale = Vector2(0.2, 0.2)
-
-[node name="Plain Building" parent="." instance=ExtResource("6_cwotx")]
-position = Vector2(251, 418)
-scale = Vector2(0.4, 0.4)
-
-[node name="Plain Building Risers" parent="." instance=ExtResource("7_ha8vb")]
-position = Vector2(259, 1052)
-scale = Vector2(0.4, 0.4)
 
 [node name="ammoGraphic" parent="." instance=ExtResource("8_skxs2")]
 position = Vector2(1733, 9)

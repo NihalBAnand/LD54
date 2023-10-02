@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://ysb5lvfag6hn"]
 
 [ext_resource type="Script" path="res://assets/scripts/Player.gd" id="1_wj670"]
-[ext_resource type="PackedScene" uid="uid://cc1ersljl27lj" path="res://assets/prefabs/playerBullet.tscn" id="2_plsr5"]
+[ext_resource type="PackedScene" uid="uid://cc1ersljl27lj" path="res://assets/prefabs/Enemies and Players/playerBullet.tscn" id="2_plsr5"]
 [ext_resource type="Texture2D" uid="uid://dlwlq1omty0ti" path="res://assets/Art/player_frame_1.png" id="3_jaiti"]
 [ext_resource type="Texture2D" uid="uid://cywysxivfffvw" path="res://assets/Art/player_frame_2.png" id="4_74s0q"]
 

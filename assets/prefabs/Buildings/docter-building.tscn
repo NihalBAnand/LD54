@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4h2a114tohc0"]
+
+[ext_resource type="Texture2D" uid="uid://dk58oca8a1ynb" path="res://assets/Art/docter_building.png" id="1_iybes"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_egqew"]
+size = Vector2(962, 1426)
+
+[node name="Docter Building" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_iybes")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-138, -28)
+shape = SubResource("RectangleShape2D_egqew")

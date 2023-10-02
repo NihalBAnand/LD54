@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://5owr73mr7mac"]
 
 [ext_resource type="Script" path="res://assets/scripts/baseEnemy.gd" id="1_cw5j7"]
-[ext_resource type="PackedScene" uid="uid://b573fvrle16td" path="res://assets/prefabs/enemyBullet.tscn" id="2_hm1yb"]
-[ext_resource type="PackedScene" uid="uid://ysb5lvfag6hn" path="res://assets/prefabs/player.tscn" id="2_y2206"]
+[ext_resource type="PackedScene" uid="uid://b573fvrle16td" path="res://assets/prefabs/Enemies and Players/enemyBullet.tscn" id="2_hm1yb"]
+[ext_resource type="PackedScene" uid="uid://ysb5lvfag6hn" path="res://assets/prefabs/Enemies and Players/player.tscn" id="2_y2206"]
 [ext_resource type="Texture2D" uid="uid://bhkiduqfmpr0o" path="res://assets/Art/enemy_frame_1.png" id="4_i0v1g"]
 [ext_resource type="Texture2D" uid="uid://bmyccvp7tay8k" path="res://assets/Art/enemy_frame_2.png" id="5_2h3cc"]
 

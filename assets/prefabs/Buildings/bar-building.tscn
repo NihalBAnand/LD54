@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://3r6mulq86whs"]
+
+[ext_resource type="Texture2D" uid="uid://d1umkr4clw0pf" path="res://assets/Art/bar_building.png" id="1_oydtc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jgyj4"]
+size = Vector2(1045, 1483)
+
+[node name="Bar Building" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_oydtc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-104.5, -4.5)
+shape = SubResource("RectangleShape2D_jgyj4")
