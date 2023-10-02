@@ -1,0 +1,97 @@
+[gd_scene load_steps=10 format=3 uid="uid://ccvhdk138d0pw"]
+
+[ext_resource type="PackedScene" uid="uid://feimq2gthgmx" path="res://assets/prefabs/Buildings/plain-building-risers.tscn" id="1_yt3cl"]
+[ext_resource type="PackedScene" uid="uid://cjh8bmoqdabrj" path="res://assets/prefabs/Buildings/plain-building.tscn" id="2_78tyd"]
+[ext_resource type="PackedScene" uid="uid://d4h2a114tohc0" path="res://assets/prefabs/Buildings/docter-building.tscn" id="3_4f8s0"]
+[ext_resource type="PackedScene" uid="uid://tcq3wto6eek4" path="res://assets/prefabs/Flipped Buildings/plain-building-flipped.tscn" id="4_lqnbv"]
+[ext_resource type="PackedScene" uid="uid://bmalwj6tmpy8m" path="res://assets/prefabs/Flipped Buildings/plain-building-risers-flipped.tscn" id="5_xkvvv"]
+[ext_resource type="PackedScene" uid="uid://bc462pmhctb0m" path="res://assets/prefabs/Flipped Buildings/general-store-building-flipped.tscn" id="6_eq1a3"]
+[ext_resource type="PackedScene" uid="uid://dqmwsrmeuxwcf" path="res://assets/prefabs/Level Items/crate.tscn" id="7_ta0k1"]
+[ext_resource type="PackedScene" uid="uid://dfapc3nj4pfk2" path="res://assets/prefabs/Level Items/alcohol-barrel.tscn" id="8_qxfgf"]
+[ext_resource type="PackedScene" uid="uid://cts5fe6rstfh5" path="res://assets/prefabs/Level Items/horse-and-carriage.tscn" id="9_flepr"]
+
+[node name="level_6" type="Node2D"]
+
+[node name="Plain Building Risers" parent="." instance=ExtResource("1_yt3cl")]
+position = Vector2(185, 80)
+scale = Vector2(0.3, 0.3)
+
+[node name="Plain Building Risers2" parent="." instance=ExtResource("1_yt3cl")]
+position = Vector2(188, 1798)
+scale = Vector2(0.3, 0.3)
+
+[node name="Plain Building" parent="." instance=ExtResource("2_78tyd")]
+position = Vector2(186, 671)
+scale = Vector2(0.3, 0.3)
+
+[node name="Docter Building" parent="." instance=ExtResource("3_4f8s0")]
+position = Vector2(184, 1227)
+scale = Vector2(0.3, 0.3)
+
+[node name="Plain Building2" parent="." instance=ExtResource("4_lqnbv")]
+position = Vector2(1819, 93.0001)
+scale = Vector2(0.3, 0.3)
+
+[node name="Plain Building Risers3" parent="." instance=ExtResource("5_xkvvv")]
+position = Vector2(1809, 1862)
+scale = Vector2(0.3, 0.3)
+
+[node name="Plain Building Risers4" parent="." instance=ExtResource("5_xkvvv")]
+position = Vector2(1813, 1229)
+scale = Vector2(0.3, 0.3)
+
+[node name="General Store Building" parent="." instance=ExtResource("6_eq1a3")]
+position = Vector2(1815, 670)
+scale = Vector2(0.3, 0.3)
+
+[node name="crate5" parent="." instance=ExtResource("7_ta0k1")]
+position = Vector2(489, 1293)
+scale = Vector2(0.3, 0.3)
+
+[node name="crate6" parent="." instance=ExtResource("7_ta0k1")]
+position = Vector2(445, 1406)
+scale = Vector2(0.3, 0.3)
+
+[node name="crate7" parent="." instance=ExtResource("7_ta0k1")]
+position = Vector2(1038, 882)
+scale = Vector2(0.3, 0.3)
+
+[node name="crate8" parent="." instance=ExtResource("7_ta0k1")]
+position = Vector2(547, 1403)
+scale = Vector2(0.3, 0.3)
+
+[node name="crate9" parent="." instance=ExtResource("7_ta0k1")]
+position = Vector2(1384, 652)
+scale = Vector2(0.3, 0.3)
+
+[node name="crate10" parent="." instance=ExtResource("7_ta0k1")]
+position = Vector2(1286, 653)
+scale = Vector2(0.3, 0.3)
+
+[node name="crate11" parent="." instance=ExtResource("7_ta0k1")]
+position = Vector2(1284, 570)
+scale = Vector2(0.3, 0.3)
+
+[node name="crate12" parent="." instance=ExtResource("7_ta0k1")]
+position = Vector2(1383, 572)
+scale = Vector2(0.3, 0.3)
+
+[node name="crate13" parent="." instance=ExtResource("7_ta0k1")]
+position = Vector2(1379, 481)
+scale = Vector2(0.3, 0.3)
+
+[node name="barrel2" parent="." instance=ExtResource("8_qxfgf")]
+position = Vector2(849, 1327)
+scale = Vector2(0.2, 0.2)
+
+[node name="Horse And Carriage" parent="." instance=ExtResource("9_flepr")]
+position = Vector2(2709, 407)
+
+[node name="Horse And Carriage2" parent="." instance=ExtResource("9_flepr")]
+position = Vector2(2745, 1368)
+
+[node name="PatrolPoint1" type="Marker2D" parent="."]
+position = Vector2(554, 1782)
+
+[node name="PatrolPoint2" type="Marker2D" parent="."]
+position = Vector2(1474, 1777)

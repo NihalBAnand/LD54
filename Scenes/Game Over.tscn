@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://b41j43l7lfk7d"]
+
+[ext_resource type="FontFile" uid="uid://ducs5n0ihrmn5" path="res://assets/Font/WesternCarlo-axorm.otf" id="1_3fcgb"]
+[ext_resource type="Script" path="res://assets/scripts/Game Over.gd" id="1_v670p"]
+[ext_resource type="Texture2D" uid="uid://flb8gf85p37i" path="res://assets/Art/Spacebar.png" id="2_pwhlu"]
+
+[node name="Game Over" type="Node2D"]
+script = ExtResource("1_v670p")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 341.0
+offset_top = 678.0
+offset_right = 1694.0
+offset_bottom = 1082.0
+theme_override_fonts/normal_font = ExtResource("1_3fcgb")
+theme_override_font_sizes/normal_font_size = 250
+text = "GAME OVER
+"
+scroll_active = false
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 1288.0
+offset_top = 1301.0
+offset_right = 1514.0
+offset_bottom = 1456.0
+texture = ExtResource("2_pwhlu")

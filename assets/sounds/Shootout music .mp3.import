@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bu0b3u2nllp4n"
+path="res://.godot/imported/Shootout music .mp3-fcdf4934d337a4b3d1a9d59cc5a22ac0.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Shootout music .mp3"
+dest_files=["res://.godot/imported/Shootout music .mp3-fcdf4934d337a4b3d1a9d59cc5a22ac0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

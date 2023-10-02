@@ -73,6 +73,7 @@ func applyDamage(damage: float) -> void:
 	get_node("../healthGraphic").updateHealth()
 	if health<=0:
 		queue_free()
+		get_tree().change_scene_to_file("res://Scenes/Game Over.tscn");
 	print("player health: ")
 	print(health)
 

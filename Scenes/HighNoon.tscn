@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://clbsyitixjhdl"]
+[gd_scene load_steps=25 format=3 uid="uid://don1chvfd5piy"]
 
 [ext_resource type="Texture2D" uid="uid://d266bqax0a6xs" path="res://assets/Art/cinematic black.png" id="1_scals"]
 [ext_resource type="Script" path="res://assets/scripts/HighNoon.gd" id="1_whpuh"]
