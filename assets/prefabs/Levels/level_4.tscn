@@ -1,0 +1,82 @@
+[gd_scene load_steps=11 format=3 uid="uid://3hxh07epukr1"]
+
+[ext_resource type="PackedScene" uid="uid://feimq2gthgmx" path="res://assets/prefabs/Buildings/plain-building-risers.tscn" id="1_ww1jf"]
+[ext_resource type="PackedScene" uid="uid://tcq3wto6eek4" path="res://assets/prefabs/Flipped Buildings/plain-building-flipped.tscn" id="3_5whd7"]
+[ext_resource type="PackedScene" uid="uid://d4h2a114tohc0" path="res://assets/prefabs/Buildings/docter-building.tscn" id="4_b5bay"]
+[ext_resource type="PackedScene" uid="uid://bmalwj6tmpy8m" path="res://assets/prefabs/Flipped Buildings/plain-building-risers-flipped.tscn" id="4_j6uep"]
+[ext_resource type="PackedScene" uid="uid://bc462pmhctb0m" path="res://assets/prefabs/Flipped Buildings/general-store-building-flipped.tscn" id="5_wbp5e"]
+[ext_resource type="PackedScene" uid="uid://3r6mulq86whs" path="res://assets/prefabs/Buildings/bar-building.tscn" id="6_lkmyd"]
+[ext_resource type="PackedScene" uid="uid://dqmwsrmeuxwcf" path="res://assets/prefabs/Level Items/crate.tscn" id="7_jeno5"]
+[ext_resource type="PackedScene" uid="uid://dfapc3nj4pfk2" path="res://assets/prefabs/Level Items/alcohol-barrel.tscn" id="8_awxg6"]
+[ext_resource type="PackedScene" uid="uid://bbcd6cd2lnexp" path="res://assets/prefabs/Level Items/barrel.tscn" id="9_vh6pb"]
+[ext_resource type="PackedScene" uid="uid://cts5fe6rstfh5" path="res://assets/prefabs/Level Items/horse-and-carriage.tscn" id="10_p36ut"]
+
+[node name="Level4" type="Node2D"]
+
+[node name="Plain Building Risers" parent="." instance=ExtResource("1_ww1jf")]
+position = Vector2(185, 80)
+scale = Vector2(0.3, 0.3)
+
+[node name="Plain Building Risers2" parent="." instance=ExtResource("1_ww1jf")]
+position = Vector2(188, 699)
+scale = Vector2(0.3, 0.3)
+
+[node name="Plain Building2" parent="." instance=ExtResource("3_5whd7")]
+position = Vector2(1811, 1804)
+scale = Vector2(0.3, 0.3)
+
+[node name="Plain Building Risers3" parent="." instance=ExtResource("4_j6uep")]
+position = Vector2(1809, 661)
+scale = Vector2(0.3, 0.3)
+
+[node name="Plain Building Risers4" parent="." instance=ExtResource("4_j6uep")]
+position = Vector2(1813, 1229)
+scale = Vector2(0.3, 0.3)
+
+[node name="Docter Building" parent="." instance=ExtResource("4_b5bay")]
+position = Vector2(190, 1828)
+scale = Vector2(0.3, 0.3)
+
+[node name="General Store Building" parent="." instance=ExtResource("5_wbp5e")]
+position = Vector2(1809, 72)
+scale = Vector2(0.3, 0.3)
+
+[node name="Bar Building" parent="." instance=ExtResource("6_lkmyd")]
+position = Vector2(193, 1268)
+scale = Vector2(0.3, 0.3)
+
+[node name="crate5" parent="." instance=ExtResource("7_jeno5")]
+position = Vector2(1091, 499)
+scale = Vector2(0.3, 0.3)
+
+[node name="crate6" parent="." instance=ExtResource("7_jeno5")]
+position = Vector2(993, 500)
+scale = Vector2(0.3, 0.3)
+
+[node name="crate8" parent="." instance=ExtResource("7_jeno5")]
+position = Vector2(1090, 419)
+scale = Vector2(0.3, 0.3)
+
+[node name="barrel2" parent="." instance=ExtResource("8_awxg6")]
+position = Vector2(606, 1503)
+scale = Vector2(0.2, 0.2)
+
+[node name="barrel3" parent="." instance=ExtResource("8_awxg6")]
+position = Vector2(1594, 1178)
+scale = Vector2(0.2, 0.2)
+
+[node name="barrel" parent="." instance=ExtResource("9_vh6pb")]
+position = Vector2(607, 1421)
+scale = Vector2(0.2, 0.2)
+
+[node name="Horse And Carriage" parent="." instance=ExtResource("10_p36ut")]
+position = Vector2(1777, 854)
+scale = Vector2(0.4, 0.4)
+
+[node name="Horse And Carriage2" parent="." instance=ExtResource("10_p36ut")]
+position = Vector2(1361, 1470)
+scale = Vector2(0.4, 0.4)
+
+[node name="Horse And Carriage3" parent="." instance=ExtResource("10_p36ut")]
+position = Vector2(637, 324)
+scale = Vector2(0.4, 0.4)

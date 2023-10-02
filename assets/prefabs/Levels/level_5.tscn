@@ -1,16 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://b4240r10ru40r"]
+[gd_scene load_steps=8 format=3 uid="uid://by62ip6mx5fwm"]
 
 [ext_resource type="PackedScene" uid="uid://feimq2gthgmx" path="res://assets/prefabs/Buildings/plain-building-risers.tscn" id="1_gsn67"]
-[ext_resource type="PackedScene" uid="uid://cjh8bmoqdabrj" path="res://assets/prefabs/Buildings/plain-building.tscn" id="2_pcl2n"]
-[ext_resource type="PackedScene" uid="uid://tcq3wto6eek4" path="res://assets/prefabs/Flipped Buildings/plain-building-flipped.tscn" id="3_b6goi"]
-[ext_resource type="PackedScene" uid="uid://bmalwj6tmpy8m" path="res://assets/prefabs/Flipped Buildings/plain-building-risers-flipped.tscn" id="4_4u1wc"]
+[ext_resource type="PackedScene" uid="uid://d4h2a114tohc0" path="res://assets/prefabs/Buildings/docter-building.tscn" id="4_k84mn"]
 [ext_resource type="PackedScene" uid="uid://mpgac838e0e1" path="res://assets/prefabs/Buildings/lawyur-building.tscn" id="5_shlch"]
 [ext_resource type="PackedScene" uid="uid://kvekfu687yqb" path="res://assets/prefabs/Flipped Buildings/bar-building-flipped.tscn" id="6_m8kpi"]
 [ext_resource type="PackedScene" uid="uid://dqmwsrmeuxwcf" path="res://assets/prefabs/Level Items/crate.tscn" id="7_oyqj1"]
 [ext_resource type="PackedScene" uid="uid://dfapc3nj4pfk2" path="res://assets/prefabs/Level Items/alcohol-barrel.tscn" id="8_pfjal"]
 [ext_resource type="PackedScene" uid="uid://bbcd6cd2lnexp" path="res://assets/prefabs/Level Items/barrel.tscn" id="9_cwowj"]
 
-[node name="Level3" type="Node2D"]
+[node name="Level5" type="Node2D"]
 
 [node name="Plain Building Risers" parent="." instance=ExtResource("1_gsn67")]
 position = Vector2(185, 80)
@@ -20,52 +18,64 @@ scale = Vector2(0.3, 0.3)
 position = Vector2(188, 1798)
 scale = Vector2(0.3, 0.3)
 
-[node name="Plain Building" parent="." instance=ExtResource("2_pcl2n")]
-position = Vector2(186, 1218)
-scale = Vector2(0.3, 0.3)
-
-[node name="Plain Building2" parent="." instance=ExtResource("3_b6goi")]
-position = Vector2(1819, 93.0001)
-scale = Vector2(0.3, 0.3)
-
-[node name="Plain Building Risers3" parent="." instance=ExtResource("4_4u1wc")]
-position = Vector2(1809, 661)
-scale = Vector2(0.3, 0.3)
-
-[node name="Plain Building Risers4" parent="." instance=ExtResource("4_4u1wc")]
-position = Vector2(1813, 1229)
-scale = Vector2(0.3, 0.3)
-
 [node name="Lawyur Building" parent="." instance=ExtResource("5_shlch")]
-position = Vector2(188, 682)
+position = Vector2(185, 1148)
 scale = Vector2(0.3, 0.3)
 
 [node name="Bar Building" parent="." instance=ExtResource("6_m8kpi")]
 position = Vector2(1811, 1831)
 scale = Vector2(0.3, 0.3)
 
+[node name="Bar Building2" parent="." instance=ExtResource("6_m8kpi")]
+position = Vector2(1816, 1244)
+scale = Vector2(0.3, 0.3)
+
+[node name="Bar Building3" parent="." instance=ExtResource("6_m8kpi")]
+position = Vector2(1813, 685)
+scale = Vector2(0.3, 0.3)
+
+[node name="Bar Building4" parent="." instance=ExtResource("6_m8kpi")]
+position = Vector2(1816, 141)
+scale = Vector2(0.3, 0.3)
+
+[node name="Docter Building" parent="." instance=ExtResource("4_k84mn")]
+position = Vector2(188, 650)
+scale = Vector2(0.3, 0.3)
+
 [node name="crate5" parent="." instance=ExtResource("7_oyqj1")]
-position = Vector2(1583, 364)
+position = Vector2(1315, 1500)
 scale = Vector2(0.3, 0.3)
 
 [node name="crate6" parent="." instance=ExtResource("7_oyqj1")]
-position = Vector2(1485, 365)
+position = Vector2(1217, 1501)
 scale = Vector2(0.3, 0.3)
 
 [node name="crate8" parent="." instance=ExtResource("7_oyqj1")]
-position = Vector2(1582, 284)
+position = Vector2(1314, 1420)
+scale = Vector2(0.3, 0.3)
+
+[node name="crate10" parent="." instance=ExtResource("7_oyqj1")]
+position = Vector2(1313, 1335)
+scale = Vector2(0.3, 0.3)
+
+[node name="crate11" parent="." instance=ExtResource("7_oyqj1")]
+position = Vector2(1313, 1250)
+scale = Vector2(0.3, 0.3)
+
+[node name="crate7" parent="." instance=ExtResource("7_oyqj1")]
+position = Vector2(1412, 1497)
+scale = Vector2(0.3, 0.3)
+
+[node name="crate9" parent="." instance=ExtResource("7_oyqj1")]
+position = Vector2(1411, 1417)
+scale = Vector2(0.3, 0.3)
+
+[node name="crate12" parent="." instance=ExtResource("7_oyqj1")]
+position = Vector2(1407, 1332)
 scale = Vector2(0.3, 0.3)
 
 [node name="barrel2" parent="." instance=ExtResource("8_pfjal")]
 position = Vector2(606, 1503)
-scale = Vector2(0.2, 0.2)
-
-[node name="barrel4" parent="." instance=ExtResource("9_cwowj")]
-position = Vector2(1046, 1283)
-scale = Vector2(0.2, 0.2)
-
-[node name="barrel3" parent="." instance=ExtResource("8_pfjal")]
-position = Vector2(1046, 1207)
 scale = Vector2(0.2, 0.2)
 
 [node name="barrel7" parent="." instance=ExtResource("9_cwowj")]
@@ -80,10 +90,8 @@ scale = Vector2(0.2, 0.2)
 position = Vector2(607, 1421)
 scale = Vector2(0.2, 0.2)
 
-[node name="barrel5" parent="." instance=ExtResource("8_pfjal")]
-position = Vector2(961, 1285)
-scale = Vector2(0.2, 0.2)
+[node name="PatrolPoint1" type="Marker2D" parent="."]
+position = Vector2(617, 1672)
 
-[node name="barrel6" parent="." instance=ExtResource("9_cwowj")]
-position = Vector2(962, 1203)
-scale = Vector2(0.2, 0.2)
+[node name="PatrolPoint2" type="Marker2D" parent="."]
+position = Vector2(1339, 1642)

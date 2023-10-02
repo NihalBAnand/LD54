@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var enemyBullet: PackedScene
 @onready var spawn_point: Marker2D = $enemyBulletSpawn
 
-const speed = 1;
+const speed = 3;
 var dir = 1;
 
 var timerOn = false;
@@ -16,8 +16,12 @@ var health = 100
 func _physics_process(delta):
 	if !timerOn:
 		if abs(get_parent().get_node("Level" + str(get_node("/root/Global").currentCharacter) + "/PatrolPoint1").global_position.x - global_position.x) < 5 || abs(get_parent().get_node("Level" + str(get_node("/root/Global").currentCharacter) + "/PatrolPoint2").global_position.x - global_position.x) < 5:
-			timerOn = true;
-			get_node("waitTimer").start();
+			if (get_node("immuneTimer").time_left <= 0):
+				timerOn = true;
+				get_node("waitTimer").start();
+			else:
+				position.x += speed * dir;
+				print(get_node("immuneTimer").time_left)
 		else:
 			position.x += speed * dir;
 		
@@ -31,8 +35,7 @@ func _on_shoot_timer_timeout():
 
 func shoot():
 	var b: enemyBullet = enemyBullet.instantiate()
-	add_child(b)
-	b.transform = spawn_point.transform
+	b.position = spawn_point.global_position;
 	
 	var smoke = load("res://assets/prefabs/Enemies and Players/Smoke.tscn").instantiate();
 	add_child(smoke);
@@ -53,3 +56,4 @@ func applyDamage(damage: float) -> void:
 func _on_wait_timer_timeout():
 	dir *= -1;
 	timerOn = false;
+	get_node("immuneTimer").start();

@@ -58,7 +58,11 @@ one_shot = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_ug5t8")
-volume_db = -5.621
+volume_db = -21.55
+
+[node name="immuneTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
 
 [connection signal="timeout" from="shootTimer" to="." method="_on_shoot_timer_timeout"]
 [connection signal="timeout" from="waitTimer" to="." method="_on_wait_timer_timeout"]
