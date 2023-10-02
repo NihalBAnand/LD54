@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://2ekxgra5guxw"]
+
+[ext_resource type="Script" path="res://assets/scripts/TheNextDay.gd" id="1_sxnm4"]
+[ext_resource type="Texture2D" uid="uid://d266bqax0a6xs" path="res://assets/Art/cinematic black.png" id="2_0ccqt"]
+[ext_resource type="FontFile" uid="uid://ducs5n0ihrmn5" path="res://assets/Font/WesternCarlo-axorm.otf" id="3_e5cdh"]
+[ext_resource type="Texture2D" uid="uid://flb8gf85p37i" path="res://assets/Art/Spacebar.png" id="4_150gy"]
+
+[node name="TheNextDay" type="Node2D"]
+script = ExtResource("1_sxnm4")
+
+[node name="CinematicBlack" type="Sprite2D" parent="."]
+position = Vector2(978.5, 1065.75)
+scale = Vector2(439.4, 427.3)
+texture = ExtResource("2_0ccqt")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 39.0
+offset_right = 1906.0
+offset_bottom = 1055.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_e5cdh")
+theme_override_font_sizes/font_size = 200
+text = "The Next Day..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 768.0
+offset_top = 1187.0
+offset_right = 1125.0
+offset_bottom = 1451.0
+texture = ExtResource("4_150gy")
+
+[node name="Timer" type="Timer" parent="TextureRect"]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="TextureRect/Timer" to="." method="_on_timer_timeout"]

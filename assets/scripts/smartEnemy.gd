@@ -49,7 +49,7 @@ func shoot():
 func applyDamage(damage: float) -> void:
 	health -= damage
 	if health<=0:
-		get_tree().change_scene_to_file("res://Scenes/HighNoon.tscn");
+		get_tree().change_scene_to_file("res://Scenes/Epilogue.tscn");
 		queue_free()
 	print(health)
 

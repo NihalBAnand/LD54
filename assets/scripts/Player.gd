@@ -9,7 +9,7 @@ var ammo
 
 var health = 30
 var delayTimer = null
-var bulletDelay =  .2
+var bulletDelay =  .7
 var canShoot = true
 
 var reloadVisible = true;
