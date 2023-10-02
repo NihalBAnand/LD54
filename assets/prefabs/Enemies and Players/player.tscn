@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://ysb5lvfag6hn"]
+[gd_scene load_steps=8 format=3 uid="uid://ysb5lvfag6hn"]
 
 [ext_resource type="Script" path="res://assets/scripts/Player.gd" id="1_wj670"]
 [ext_resource type="PackedScene" uid="uid://cc1ersljl27lj" path="res://assets/prefabs/Enemies and Players/playerBullet.tscn" id="2_plsr5"]
 [ext_resource type="Texture2D" uid="uid://dlwlq1omty0ti" path="res://assets/Art/player_frame_1.png" id="3_jaiti"]
 [ext_resource type="Texture2D" uid="uid://cywysxivfffvw" path="res://assets/Art/player_frame_2.png" id="4_74s0q"]
+[ext_resource type="AudioStream" uid="uid://cpabedoep2iox" path="res://assets/sounds/gun.wav" id="5_agwna"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_87im7"]
 animations = [{
@@ -49,3 +50,7 @@ shape = SubResource("RectangleShape2D_pa474")
 
 [node name="BulletSpawn" type="Marker2D" parent="."]
 position = Vector2(49.2102, 146.115)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_agwna")
+volume_db = -21.55

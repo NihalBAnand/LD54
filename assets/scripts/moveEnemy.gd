@@ -33,6 +33,9 @@ func shoot():
 	var smoke = load("res://assets/prefabs/Enemies and Players/Smoke.tscn").instantiate();
 	add_child(smoke);
 	smoke.position = spawn_point.position;
+	
+	if (!get_node("AudioStreamPlayer").playing):
+		get_node("AudioStreamPlayer").play();
 
 
 func applyDamage(damage: float) -> void:

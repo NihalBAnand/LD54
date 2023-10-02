@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://o4k0wdenbvke"]
+[gd_scene load_steps=8 format=3 uid="uid://o4k0wdenbvke"]
 
 [ext_resource type="Script" path="res://assets/scripts/moveEnemy.gd" id="1_axbfe"]
 [ext_resource type="Texture2D" uid="uid://bhkiduqfmpr0o" path="res://assets/Art/enemy_frame_1.png" id="2_k6vf0"]
 [ext_resource type="PackedScene" uid="uid://b573fvrle16td" path="res://assets/prefabs/Enemies and Players/enemyBullet.tscn" id="2_wr48v"]
 [ext_resource type="Texture2D" uid="uid://bmyccvp7tay8k" path="res://assets/Art/enemy_frame_2.png" id="3_5n2vb"]
+[ext_resource type="AudioStream" uid="uid://cpabedoep2iox" path="res://assets/sounds/gun.wav" id="5_30wna"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4pe63"]
 animations = [{
@@ -51,5 +52,9 @@ autostart = true
 
 [node name="enemyBulletSpawn" type="Marker2D" parent="."]
 position = Vector2(175, 117)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_30wna")
+volume_db = -21.55
 
 [connection signal="timeout" from="shootTimer" to="." method="_on_shoot_timer_timeout"]
